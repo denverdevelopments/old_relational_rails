@@ -24,7 +24,10 @@ Things you may want to cover:
 * ...
 
 ### SUPPLIERS SCHEMA
+Supplier-Delivery Trucks schema:
+![alt text][logo]
 
+[logo]: https://github.com/denverdevelopments/relational_rails/blob/ed4bef08371cda30cfd08bde06457471090b89eb/Relational%20Rails%20Tables.png
 
 
 ### RESTAURANTS SCHEMA
