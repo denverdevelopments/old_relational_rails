@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   #kevin routes
   get '/eats', to: 'eats#index'
+  get '/restaurants', to: 'restaurants#index'
+  get '/chefs', to: 'chefs#index'
 
 
 
