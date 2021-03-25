@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #wyatt routes
   get '/supply_side', to: 'supply_side#index'
-  get '/suppliers', to: 'supplier#index'
+  get '/suppliers', to: 'suppliers#index'
 
 
 

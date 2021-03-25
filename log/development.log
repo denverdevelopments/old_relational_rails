@@ -2575,3 +2575,113 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 NameError (uninitialized constant ChefsController::Chef):
   
 app/controllers/chefs_controller.rb:5:in `index'
+Started GET "/eats" for ::1 at 2021-03-25 11:01:59 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 160ms (Views: 157.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-25 11:02:02 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-25 11:02:03 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SuppliersController::Supplier):
+  
+app/controllers/suppliers_controller.rb:4:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-25 11:08:39 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SuppliersController::Suppliers):
+  
+app/controllers/suppliers_controller.rb:4:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-25 11:10:05 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SuppliersController::Supplier):
+  
+app/controllers/suppliers_controller.rb:4:in `index'
+Started GET "/eats" for ::1 at 2021-03-25 11:13:57 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-25 11:13:58 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 25ms (Views: 14.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-25 11:17:41 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-25 11:17:44 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SuppliersController::Supplier):
+  
+app/controllers/suppliers_controller.rb:5:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-25 11:20:10 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  Rendered suppliers/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All Suppliers</h1>
+    2: 
+    3: <% @suppliers.each do |supplier| %>
+    4:   <h2><%= supplier.name %></h2>
+    5:   <p>Number of Employees: <%= supplier.number_of_employees %></p>
+    6:   <p>Open Weekends?: <%= supplier.open_weekends %></p>
+  
+app/views/suppliers/index.html.erb:3:in `_app_views_suppliers_index_html_erb__2611653642108997129_70166737345540'
+Started GET "/suppliers" for ::1 at 2021-03-25 11:21:07 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SuppliersController::Supplier):
+  
+app/controllers/suppliers_controller.rb:5:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-25 11:24:49 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:3
+  Rendered suppliers/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 16.6ms | ActiveRecord: 2.1ms)
+
+
