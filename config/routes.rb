@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   #wyatt routes
-  get '/supply side', to: 'supplyside#index'
+  get '/supply_side', to: 'supplyside#index'
 
 
 
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
 
   #kevin routes
+  get '/eats', to: 'eats#index'
 
 
 
