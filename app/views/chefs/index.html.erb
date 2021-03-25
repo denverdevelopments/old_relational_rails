@@ -1,0 +1,8 @@
+## app/views/chefs/index.html.erb
+
+<h1>All Chefs</h1>
+
+<% @chefs.each do |chef| %>
+  <h2><%= chef.name %></h2>
+  <p>Years Worked: <%= chef.years_worked %></p>
+<% end %>
