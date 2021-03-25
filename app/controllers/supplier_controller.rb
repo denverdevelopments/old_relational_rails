@@ -1,6 +1,6 @@
 
 class SupplierController < ApplicationController
   def index
-    # @suppliers = Supplier.all
+    @suppliers = Supplier.all
   end
 end
