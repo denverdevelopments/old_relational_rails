@@ -1,0 +1,7 @@
+<h1>All Suppliers</h1>
+
+<% @suppliers.each do |supplier| %>
+  <h2><%= supplier.name %></h2>
+  <p>Number of Employees: <%= supplier.number_of_employees %></p>
+  <p>Open Weekends?: <%= supplier.open_weekends %></p>
+<% end %>
