@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   #wyatt routes
+  get '/supply side', to: 'supplyside#index'
+
 
 
 
 
 
   #kevin routes
+
 
 
 
