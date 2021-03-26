@@ -27,4 +27,10 @@ wicks.chefs.create!(name: "Jessie Holiday", years_worked: 9, can_close: false)
 miller.chefs.create!(name: "Jacque Milair", years_worked: 6, can_close: true)
 
 ## Wyatt side
+
+Supplier.destroy_all
+SupplyTruck.destroy_all
+
 kevin = Supplier.create!(name: "Kevin's Carrots", number_of_employees: 5, open_weekends: true)
+wes = Supplier.create!(name: "The Hog Farm", number_of_employees: 5, open_weekends: false)
+josie = Supplier.create!(name: "Josie's Apple Orchard", number_of_employees: 31, open_weekends: true)

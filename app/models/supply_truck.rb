@@ -1,0 +1,3 @@
+class SupplyTruck < ApplicationRecord
+
+end
