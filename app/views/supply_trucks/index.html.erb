@@ -1,9 +1,12 @@
-<a href="/eats">Eats Index</a>
-<a href="/suppliers">Suppliers Index</a>
+<a href="/suppliers"> Supplier Index</a>
+<a href="/eats">Restaurants & Chefs</a>
+
 
 <h1>All Supply Trucks</h1>
 
-<% @supply_trucks.each do |supply_truck| %>
-<h2><a href="/supply_trucks/<%= supply_truck.id %>"></a></h2>
-  <p>Driver Name: <%= supply_truck.driver_name %></p>
+<h1><% @supply_trucks.each do |supply_truck| %><h1>
+  <h2>Truck: <%= supply_truck.id %></h2>
+  <p>Driver: <%= supply_truck.driver_name %></p>
+  <p>Daily Deliveries: <%= supply_truck.number_of_daily_deliveries %></p>
+  <p> Truck Is Refridgerated: <%= supply_truck.refrigerated %></p>
 <% end %>
