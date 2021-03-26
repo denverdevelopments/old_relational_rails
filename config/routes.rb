@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/suppliers', to: 'suppliers#index'
   get '/supply_trucks', to: 'supply_trucks#index'
   get '/suppliers/:id', to: 'suppliers#show'
+  get '/supply_trucks/:id', to: 'supply_trucks#show'
 
 
 
