@@ -2462,3 +2462,474 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateChefs (20210325172704)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "chefs"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210325172704"]]
+  ↳ bin/rails:4
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateChefs (20210325172704)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "chefs" ("id" bigserial primary key, "name" character varying, "years_worked" integer, "can_close" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210325172704_create_chefs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210325172704"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (5039.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "relational_rails_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (0.4ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (0.2ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (0.4ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "TGI Kevin's"], ["capacity", 220], ["has_bar", false], ["created_at", "2021-03-26 02:48:22.038128"], ["updated_at", "2021-03-26 02:48:22.038128"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wicks Saloon n' Honkytonk"], ["capacity", 95], ["has_bar", true], ["created_at", "2021-03-26 02:48:22.040472"], ["updated_at", "2021-03-26 02:48:22.040472"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miller Brew Pub"], ["capacity", 48], ["has_bar", true], ["created_at", "2021-03-26 02:48:22.042488"], ["updated_at", "2021-03-26 02:48:22.042488"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddRestaurantToChefs (20210326025350)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "chefs" ADD "restaurant_id" bigint[0m
+  ↳ db/migrate/20210326025350_add_restaurant_to_chefs.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_chefs_on_restaurant_id" ON "chefs"  ("restaurant_id")[0m
+  ↳ db/migrate/20210326025350_add_restaurant_to_chefs.rb:3
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "chefs" ADD CONSTRAINT "fk_rails_76ee73214c"
+FOREIGN KEY ("restaurant_id")
+  REFERENCES "restaurants" ("id")
+[0m
+  ↳ db/migrate/20210326025350_add_restaurant_to_chefs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210326025350"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (1.0ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (0.4ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mRestaurant Create (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "TGI Kevin's"], ["capacity", 220], ["has_bar", false], ["created_at", "2021-03-26 02:54:18.557617"], ["updated_at", "2021-03-26 02:54:18.557617"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wicks Saloon n' Honkytonk"], ["capacity", 95], ["has_bar", true], ["created_at", "2021-03-26 02:54:18.561254"], ["updated_at", "2021-03-26 02:54:18.561254"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miller Brew Pub"], ["capacity", 48], ["has_bar", true], ["created_at", "2021-03-26 02:54:18.563310"], ["updated_at", "2021-03-26 02:54:18.563310"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mChef Create (0.9ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kevon Loron"], ["years_worked", 4], ["can_close", false], ["created_at", "2021-03-26 02:54:18.627303"], ["updated_at", "2021-03-26 02:54:18.627303"], ["restaurant_id", 13]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mChef Create (0.4ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lordon Gamsey"], ["years_worked", 2], ["can_close", true], ["created_at", "2021-03-26 02:54:18.631258"], ["updated_at", "2021-03-26 02:54:18.631258"], ["restaurant_id", 13]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mChef Create (0.5ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chulia Jild"], ["years_worked", 9], ["can_close", false], ["created_at", "2021-03-26 02:54:18.633917"], ["updated_at", "2021-03-26 02:54:18.633917"], ["restaurant_id", 13]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Will Wyatt"], ["years_worked", 9], ["can_close", false], ["created_at", "2021-03-26 02:54:18.638001"], ["updated_at", "2021-03-26 02:54:18.638001"], ["restaurant_id", 14]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mChef Create (0.4ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jessie Holiday"], ["years_worked", 9], ["can_close", false], ["created_at", "2021-03-26 02:54:18.641215"], ["updated_at", "2021-03-26 02:54:18.641215"], ["restaurant_id", 14]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mChef Create (3.0ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jacque Milair"], ["years_worked", 6], ["can_close", true], ["created_at", "2021-03-26 02:54:18.643436"], ["updated_at", "2021-03-26 02:54:18.643436"], ["restaurant_id", 15]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSupplier Create (0.6ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "number_of_employees", "open_weekends", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kevin's Carrots"], ["number_of_employees", 5], ["open_weekends", true], ["created_at", "2021-03-26 02:54:18.657794"], ["updated_at", "2021-03-26 02:54:18.657794"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Destroy (2.5ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mChef Load (0.6ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.5ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.4ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.3ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.3ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.3ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mChef Load (0.6ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mChef Load (0.7ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (4.7ms)[0m  [1m[35mTRUNCATE TABLE "chefs"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRestaurant Destroy (1.0ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "restaurants"[0m
+  ↳ db/seeds.rb:13
+Started GET "/" for ::1 at 2021-03-25 21:05:57 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 228ms (Views: 226.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-25 21:06:01 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-25 21:06:03 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-25 21:06:07 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.8ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:5
+  Rendered chefs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 2.4ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mChef Load (0.5ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "TGI Kevin's"], ["capacity", 220], ["has_bar", false], ["created_at", "2021-03-26 03:09:46.935677"], ["updated_at", "2021-03-26 03:09:46.935677"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mRestaurant Create (0.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wicks Saloon n' Honkytonk"], ["capacity", 95], ["has_bar", true], ["created_at", "2021-03-26 03:09:46.937507"], ["updated_at", "2021-03-26 03:09:46.937507"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miller Brew Pub"], ["capacity", 48], ["has_bar", true], ["created_at", "2021-03-26 03:09:46.939048"], ["updated_at", "2021-03-26 03:09:46.939048"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mChef Create (0.9ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kevon Loron"], ["years_worked", 4], ["can_close", false], ["created_at", "2021-03-26 03:09:46.956586"], ["updated_at", "2021-03-26 03:09:46.956586"], ["restaurant_id", 16]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lordon Gamsey"], ["years_worked", 2], ["can_close", true], ["created_at", "2021-03-26 03:09:46.959245"], ["updated_at", "2021-03-26 03:09:46.959245"], ["restaurant_id", 16]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chulia Jild"], ["years_worked", 9], ["can_close", false], ["created_at", "2021-03-26 03:09:46.961041"], ["updated_at", "2021-03-26 03:09:46.961041"], ["restaurant_id", 16]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Will Wyatt"], ["years_worked", 9], ["can_close", false], ["created_at", "2021-03-26 03:09:46.962835"], ["updated_at", "2021-03-26 03:09:46.962835"], ["restaurant_id", 17]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jessie Holiday"], ["years_worked", 9], ["can_close", false], ["created_at", "2021-03-26 03:09:46.964589"], ["updated_at", "2021-03-26 03:09:46.964589"], ["restaurant_id", 17]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "years_worked", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jacque Milair"], ["years_worked", 6], ["can_close", true], ["created_at", "2021-03-26 03:09:46.966209"], ["updated_at", "2021-03-26 03:09:46.966209"], ["restaurant_id", 18]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mSupplier Create (0.4ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "number_of_employees", "open_weekends", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kevin's Carrots"], ["number_of_employees", 5], ["open_weekends", true], ["created_at", "2021-03-26 03:09:46.976004"], ["updated_at", "2021-03-26 03:09:46.976004"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+Started GET "/restaurants" for ::1 at 2021-03-25 21:11:46 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-25 21:11:51 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:5
+  Rendered chefs/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 27ms (Views: 20.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-25 21:12:06 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-25 21:13:58 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-25 21:18:31 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:5
+  Rendered chefs/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
