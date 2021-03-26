@@ -15,10 +15,11 @@ Rails.application.routes.draw do
   #kevin routes
   get '/eats', to: 'eats#index'
   get '/restaurants', to: 'restaurants#index'
+  get '/restaurants/:id', to: "restaurants#show"
+  get '/restaurants/:id/edit', to: 'restaurants#edit'
+  patch '/restaurants/:id', to: 'restaurants#update'
+
   get '/chefs', to: 'chefs#index'
-
-
-
-
+  get '/chefs/:id', to: "chefs#show"
 
 end

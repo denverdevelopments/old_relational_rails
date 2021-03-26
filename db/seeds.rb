@@ -21,7 +21,7 @@ tgik.chefs.create!(name: "Kevon Loron", years_worked: 4, can_close: false)
 tgik.chefs.create!(name: "Lordon Gamsey", years_worked: 2, can_close: true)
 tgik.chefs.create!(name: "Chulia Jild", years_worked: 9, can_close: false)
 
-wicks.chefs.create!(name: "Will Wyatt", years_worked: 9, can_close: false)
+wicks.chefs.create!(name: "Earp Wyatt", years_worked: 9, can_close: false)
 wicks.chefs.create!(name: "Jessie Holiday", years_worked: 9, can_close: false)
 
 miller.chefs.create!(name: "Jacque Milair", years_worked: 6, can_close: true)
