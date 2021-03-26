@@ -11,8 +11,3 @@ Restaurant.destroy_all
 tgik = Restaurant.create!(name: "TGI Kevin's", capacity: 220, has_bar: false)
 wicks = Restaurant.create!(name: "Wicks Saloon", capacity: 95, has_bar: true)
 miller = Restaurant.create!(name: "Miller Brew Pub", capacity: 48, has_bar: true)
-
-
-
-
-farm1 = Supplier.create!(name: "Kevin's carrots", number_of_employees: 5, open_weekends: false)

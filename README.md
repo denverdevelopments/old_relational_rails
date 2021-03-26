@@ -30,7 +30,7 @@ Supplier-Delivery Trucks schema:
 [logo]: https://github.com/denverdevelopments/relational_rails/blob/ed4bef08371cda30cfd08bde06457471090b89eb/Relational%20Rails%20Tables.png
 
 
-### RESTAURANTS SCHEMA
+### RESTAURANTS-CHEFS SCHEMA
 Restaurants-Chefs schema:
 ![alt text][logo]
 
