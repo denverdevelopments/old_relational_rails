@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/restaurants/:id', to: "restaurants#show"
   get '/restaurants/:id/edit', to: 'restaurants#edit'
   patch '/restaurants/:id', to: 'restaurants#update'
+  get '/restaurants/:id/chefs', to: 'restaurants#chefs'
 
   get '/chefs', to: 'chefs#index'
   get '/chefs/:id', to: "chefs#show"

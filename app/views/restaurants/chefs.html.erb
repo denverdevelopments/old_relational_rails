@@ -1,0 +1,12 @@
+<%# app/views/restaurants/chefs.html.erb %>
+<a href="/">Home  .</a>
+<a href="/restaurants">.  Restaurants Index  .</a>
+<a href="/chefs">.  Chefs Index</a>
+
+<h1>Restaurant Staff: Chefs</h1>
+
+<% @chefs.each do |chef| %>
+  <%if chef.restaurant_id == restaurant.id
+    <h2><%= @restaurant.name %></h2>
+  <% end %>
+<% end %>

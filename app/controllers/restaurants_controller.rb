@@ -24,4 +24,8 @@ class RestaurantsController < ApplicationController
     redirect_to "/restaurants/#{restaurant.id}"
   end
 
+  def staff
+
+  end 
+
 end
