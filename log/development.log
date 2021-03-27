@@ -6439,3 +6439,323 @@ Processing by ChefsController#edit as HTML
 Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6619517006900186970)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mChef Load (0.6ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.4ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.3ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mChef Destroy (0.2ms)[0m  [1m[31mDELETE FROM "chefs" WHERE "chefs"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRestaurant Destroy (0.6ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "TGI Kevin's"], ["capacity", 220], ["has_bar", false], ["created_at", "2021-03-27 07:04:54.294178"], ["updated_at", "2021-03-27 07:04:54.294178"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wicks Saloon n' Honkytonk"], ["capacity", 95], ["has_bar", true], ["created_at", "2021-03-27 07:04:54.295985"], ["updated_at", "2021-03-27 07:04:54.295985"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mRestaurant Create (0.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "capacity", "has_bar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miller Brew Pub"], ["capacity", 48], ["has_bar", true], ["created_at", "2021-03-27 07:04:54.297419"], ["updated_at", "2021-03-27 07:04:54.297419"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mChef Create (0.4ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "experience", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kevon Loron"], ["experience", 4], ["can_close", false], ["created_at", "2021-03-27 07:04:54.308813"], ["updated_at", "2021-03-27 07:04:54.308813"], ["restaurant_id", 7]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mChef Create (0.3ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "experience", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lordon Gamsey"], ["experience", 3], ["can_close", true], ["created_at", "2021-03-27 07:04:54.310572"], ["updated_at", "2021-03-27 07:04:54.310572"], ["restaurant_id", 7]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mChef Create (0.2ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "experience", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chulia Jild"], ["experience", 9], ["can_close", false], ["created_at", "2021-03-27 07:04:54.312039"], ["updated_at", "2021-03-27 07:04:54.312039"], ["restaurant_id", 7]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mChef Create (0.2ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "experience", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Earp Wyatt"], ["experience", 7], ["can_close", false], ["created_at", "2021-03-27 07:04:54.313467"], ["updated_at", "2021-03-27 07:04:54.313467"], ["restaurant_id", 8]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mChef Create (0.2ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "experience", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jessie Holiday"], ["experience", 2], ["can_close", false], ["created_at", "2021-03-27 07:04:54.314764"], ["updated_at", "2021-03-27 07:04:54.314764"], ["restaurant_id", 8]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mChef Create (0.2ms)[0m  [1m[32mINSERT INTO "chefs" ("name", "experience", "can_close", "created_at", "updated_at", "restaurant_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jacque Milair"], ["experience", 6], ["can_close", true], ["created_at", "2021-03-27 07:04:54.316142"], ["updated_at", "2021-03-27 07:04:54.316142"], ["restaurant_id", 9]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mSupplier Destroy (1.4ms)[0m  [1m[31mDELETE FROM "suppliers" WHERE "suppliers"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+Started GET "/supply_side" for ::1 at 2021-03-27 01:05:43 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 141ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-27 01:05:46 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:6
+  Rendered suppliers/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 30ms (Views: 18.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/suppliers/3" for ::1 at 2021-03-27 01:05:48 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/supply_trucks" for ::1 at 2021-03-27 01:05:51 -0600
+Processing by SupplyTrucksController#index as HTML
+  Rendering supply_trucks/index.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.7ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks"[0m
+  ↳ app/views/supply_trucks/index.html.erb:7
+  Rendered supply_trucks/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 31ms (Views: 20.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/supply_trucks/4" for ::1 at 2021-03-27 01:05:52 -0600
+Processing by SupplyTrucksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/supply_trucks_controller.rb:7
+  Rendering supply_trucks/show.html.erb within layouts/application
+  Rendered supply_trucks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-27 01:05:55 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-27 01:05:58 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/restaurants/9" for ::1 at 2021-03-27 01:06:04 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/9/edit" for ::1 at 2021-03-27 01:06:06 -0600
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:13
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-27 01:06:11 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.7ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/chefs/15" for ::1 at 2021-03-27 01:06:12 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/15/edit" for ::1 at 2021-03-27 01:06:14 -0600
+Processing by ChefsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:13
+  Rendering chefs/edit.html.erb within layouts/application
+  Rendered chefs/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-03-27 01:06:24 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-27 01:06:27 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-27 01:07:46 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-27 01:07:48 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-27 01:07:49 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-27 01:07:50 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-27 01:07:52 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-27 01:07:55 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-27 01:07:56 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-03-27 01:08:00 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
