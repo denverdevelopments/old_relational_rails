@@ -1,12 +1,17 @@
 <%# app/views/chefs/edit.html.erb %>
+<a href="/">Home  .</a>
+<a href="/restaurants">.  Restaurants Index  .</a>
+<a href="/chefs">.  Chefs Index</a>
 
 <form action="/chefs/<%= @chef.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Restaurant</p>
+  <p>Update Chef:</p>
   <input type='text' name='chef[name]' value="<%= @chef.name %>"/><br/>
+  <p>Years of Experience</p>
   <input type='integer' capacity='chef[experience]' value="<%= @chef.experience %>"/><br/>
-  <p>Can Close?</p>
+  <p>Has a Bar?</p>
   <input type='boolean' has_bar='chef[can_close]' value="<%= @chef.can_close %>"/><br/>
+  <br>
   <input type='submit'/>
 </form>

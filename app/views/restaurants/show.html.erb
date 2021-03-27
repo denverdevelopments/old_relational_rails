@@ -1,10 +1,11 @@
 <%# app/views/restaurants/show.html.erb %>
-<a href="/restaurants">Restaurants Index</a>
-<a href="/chefs">Chefs Index</a>
+<a href="/">Home  .</a>
+<a href="/restaurants">.  Restaurants Inde   .</a>
+<a href="/chefs">.  Chefs Index</a>
 
 <h1><%= @restaurant.name %></h1>
 <p>Chefs on Staff: </p>
-<p>Seating Capacity: <%= @restaurant.capacity %></p>
+<p>Seats: <%= @restaurant.capacity %></p>
 <p>Has a Bar?: <%= @restaurant.has_bar %></p>
 
 <a href="/restaurants/<%= @restaurant.id %>/edit">Update Restaurant</a>
