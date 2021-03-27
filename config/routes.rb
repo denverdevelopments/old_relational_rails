@@ -25,5 +25,6 @@ Rails.application.routes.draw do
 
   get '/chefs', to: 'chefs#index'
   get '/chefs/:id', to: "chefs#show"
-
+  get '/chefs/:id/edit', to: 'chefs#edit'
+  patch '/chefs/:id', to: 'chefs#update'
 end

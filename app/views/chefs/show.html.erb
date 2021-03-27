@@ -3,8 +3,8 @@
 <a href="/chefs">Chefs Index</a>
 
 <h1><%= @chef.name %></h1>
-<p>Which Restaurant: </p>
-<p>Years Experience: <%= @chef.years_worked %></p>
+<p>Which Restaurant: <%= @chef.restaurant_id %></p>
+<p>Years Experience: <%= @chef.experience %></p>
 <p>Works Days or Nights: <%= @chef.can_close %></p>
 
-<a href="/chefs/<%= @chef.id %>/update">Update Chef</a>
+<a href="/chefs/<%= @chef.id %>/edit">Update Chef</a>
