@@ -1,7 +1,6 @@
-<%# app/views/restaurants/update.html.erb %>
-
+<%# app/views/restaurants/edit.html.erb %>
 <a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index   .</a>
+<a href="/restaurants">.  Restaurants Index  .</a>
 <a href="/chefs">.  Chefs Index</a>
 
 <form action="/restaurants/<%= @restaurant.id %>" method="post">
@@ -10,9 +9,9 @@
   <p>Update Restaurant:</p>
   <input type='text' name='restaurant[name]' value="<%= @restaurant.name %>"/><br/>
   <p>Number of Seats</p>
-  <input type='integer' name='restaurant[capacity]' value="<%= @restaurant.capacity %>"/><br/>
+  <input type='integer' capacity='restaurant[capacity]' value="<%= @restaurant.capacity %>"/><br/>
   <p>Has a Bar?</p>
-  <input type='boolean' name='restaurant[has_bar]' value="<%= @restaurant.has_bar %>"/><br/>
+  <input type='boolean' has_bar='restaurant[has_bar]' value="<%= @restaurant.has_bar %>"/><br/>
   <br>
   <input type='submit'/>
 </form>

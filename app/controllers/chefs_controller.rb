@@ -24,5 +24,4 @@ class ChefsController < ApplicationController
     redirect_to "/chefs/#{chef.id}"
   end
 
-
 end
