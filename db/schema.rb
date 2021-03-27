@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_03_26_202631) do
 
   create_table "chefs", force: :cascade do |t|
     t.string "name"
-    t.integer "years_worked"
+    t.integer "experience"
     t.boolean "can_close"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
