@@ -7768,3 +7768,293 @@ Processing by SuppliersController#supply_trucks as HTML
 Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:58:19 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 24.3ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:59:30 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/show.html.erb:9
+  Rendered suppliers/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 24ms (Views: 15.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/suppliers/5" for ::1 at 2021-03-28 13:59:40 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 5]]
+  ↳ app/views/suppliers/show.html.erb:9
+  Rendered suppliers/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/supply_trucks" for ::1 at 2021-03-28 14:01:13 -0600
+Processing by SupplyTrucksController#index as HTML
+  Rendering supply_trucks/index.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.5ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks"[0m
+  ↳ app/views/supply_trucks/index.html.erb:10
+  Rendered supply_trucks/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/supply_trucks/1" for ::1 at 2021-03-28 14:01:15 -0600
+Processing by SupplyTrucksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/supply_trucks_controller.rb:7
+  Rendering supply_trucks/show.html.erb within layouts/application
+  Rendered supply_trucks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:03:01 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 14:03:02 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/show.html.erb:9
+  Rendered suppliers/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 14.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/suppliers/4/supply_trucks" for ::1 at 2021-03-28 14:03:08 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:15
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:06:14 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/wyattwicks/turing/2module/relational_rails/app/models/supplier.rb:6: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/supplier.rb:6: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/suppliers_controller.rb:5:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-28 14:06:25 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 32ms (Views: 22.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 14:06:28 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/show.html.erb:9
+  Rendered suppliers/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:06:34 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:09:05 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 31ms (Views: 21.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:09:12 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 14:09:14 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/show.html.erb:9
+  Rendered suppliers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 22.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 14:09:40 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/show.html.erb:9
+  Rendered suppliers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 15.6ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:09:44 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-28 14:11:14 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:11:15 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Direction "" is invalid. Valid directions are: [:asc, :desc, :ASC, :DESC, "asc", "desc", "ASC", "DESC"]):
+  
+app/controllers/suppliers_controller.rb:6:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-28 14:11:40 -0600
+Processing by SuppliersController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Direction "" is invalid. Valid directions are: [:asc, :desc, :ASC, :DESC, "asc", "desc", "ASC", "DESC"]):
+  
+app/controllers/suppliers_controller.rb:6:in `index'
+Started GET "/suppliers" for ::1 at 2021-03-28 14:14:13 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  Rendered suppliers/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/wyattwicks/turing/2module/relational_rails/app/views/suppliers/index.html.erb:7: syntax error, unexpected '<', expecting keyword_end
+<h1><% @suppliers.each do |sup...
+^
+/Users/wyattwicks/turing/2module/relational_rails/app/views/suppliers/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+<h1><% @suppliers.each do |supplier| @output_buffer.sa...
+                       ^~
+/Users/wyattwicks/turing/2module/relational_rails/app/views/suppliers/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/suppliers/index.html.erb:7: syntax error, unexpected '<', expecting keyword_end
+app/views/suppliers/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/suppliers/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/suppliers" for ::1 at 2021-03-28 14:15:21 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  Rendered suppliers/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/wyattwicks/turing/2module/relational_rails/app/views/suppliers/index.html.erb:8: syntax error, unexpected '<', expecting keyword_end
+<h1><% @suppliers.each do |sup...
+^
+/Users/wyattwicks/turing/2module/relational_rails/app/views/suppliers/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+<h1><% @suppliers.each do |supplier| @output_buffer.sa...
+                       ^~
+/Users/wyattwicks/turing/2module/relational_rails/app/views/suppliers/index.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/suppliers/index.html.erb:8: syntax error, unexpected '<', expecting keyword_end
+app/views/suppliers/index.html.erb:8: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/suppliers/index.html.erb:12: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/suppliers" for ::1 at 2021-03-28 14:15:39 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:8
+  Rendered suppliers/index.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+     6: <h1>All Suppliers</h1>
+     7: <%= @suppliers.order_by_creation_time %>
+     8: <h1><% @suppliers.each do |supplier| %><h1>
+     9:   <h2><a href="/suppliers/<%= supplier.id %>"><%= supplier.name supplier.created_at %></a></h2>
+    10: <% end %>
+  
+app/views/suppliers/index.html.erb:9:in `block in _app_views_suppliers_index_html_erb__1098259163810398854_70120668266880'
+app/views/suppliers/index.html.erb:8:in `_app_views_suppliers_index_html_erb__1098259163810398854_70120668266880'
+Started GET "/suppliers" for ::1 at 2021-03-28 14:15:58 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:8
+  Rendered suppliers/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:16:54 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:8
+  Rendered suppliers/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 14:17:39 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+

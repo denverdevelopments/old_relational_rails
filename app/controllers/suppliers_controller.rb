@@ -2,11 +2,12 @@
 
 class SuppliersController < ApplicationController
   def index
-    @suppliers = Supplier.all
+     @suppliers = Supplier.all
   end
 
   def show
     @supplier = Supplier.find(params[:id])
+    @supply_trucks = SupplyTruck.where(supplier_id: params[:id])
   end
 
   def supply_trucks
