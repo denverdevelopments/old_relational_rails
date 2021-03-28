@@ -6,5 +6,5 @@ class SupplyTrucksController < ApplicationController
   def show
     @supply_truck = SupplyTruck.find(params[:id])
   end
-  
+
 end
