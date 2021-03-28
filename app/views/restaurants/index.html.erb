@@ -5,6 +5,8 @@
 <h1>Available Restaurants</h1>
 
 <% @restaurants.each do |restaurant| %>
-  <h2><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h2>
+  <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h3>
   <p>Serves Alcohol?: <%= restaurant.has_bar %></p>
+  <p>Created on: <%= restaurant.created_at %></p>
+  <br>
 <% end %>
