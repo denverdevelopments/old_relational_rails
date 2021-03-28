@@ -18,7 +18,7 @@ wicks = Restaurant.create!(name: "Wicks Saloon n' Honkytonk", capacity: 95, has_
 miller = Restaurant.create!(name: "Miller Brew Pub", capacity: 48, has_bar: true)
 
 tgik.chefs.create!(name: "Kevon Loron", experience: 4, can_close: false)
-tgik.chefs.create!(name: "Lordon Gamsey", experience: 3, can_close: true)
+tgik.chefs.create!(name: "Rordon Gamsey", experience: 3, can_close: true)
 tgik.chefs.create!(name: "Chulia Jild", experience: 9, can_close: false)
 
 wicks.chefs.create!(name: "Earp Wyatt", experience: 7, can_close: false)

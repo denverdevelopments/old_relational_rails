@@ -7,6 +7,7 @@ class ChefsController < ApplicationController
 
   def show
     @chef = Chef.find(params[:id])
+    # @restaurants = Restaurant.where(id: params[:restaurant_id])
   end
 
   def edit

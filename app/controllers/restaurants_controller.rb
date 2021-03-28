@@ -7,6 +7,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @chefs = Chef.where(restaurant_id: params[:id])
   end
 
   def edit
@@ -24,8 +25,8 @@ class RestaurantsController < ApplicationController
     redirect_to "/restaurants/#{restaurant.id}"
   end
 
-  def staff
-
-  end 
-
+  def chefs
+    @chefs = Chef.where(restaurant_id: params[:id])
+    @restaurant = Restaurant.find(params[:id])
+  end
 end

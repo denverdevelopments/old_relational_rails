@@ -3,10 +3,10 @@
 <a href="/restaurants">.  Restaurants Index  .</a>
 <a href="/chefs">.  Chefs Index</a>
 
-<h1>Restaurant Staff: Chefs</h1>
+<h1>Chefs at: <%= @restaurant.name %></h1>
 
 <% @chefs.each do |chef| %>
-  <%if chef.restaurant_id == restaurant.id
-    <h2><%= @restaurant.name %></h2>
-  <% end %>
+  <h3><%= chef.name %>. ID:<%= chef.id %></h3>
+  <h4>Can close?: <%= chef.can_close %></h4>
+  <br>
 <% end %>

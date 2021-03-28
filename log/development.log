@@ -7232,3 +7232,841 @@ SyntaxError (/Users/kevinn/turing/mod_2/relational_rails/app/views/restaurants/c
     ^):
   
 app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+Started GET "/" for ::1 at 2021-03-28 13:15:51 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 150ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-28 13:15:56 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-28 13:15:58 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-28 13:16:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-28 13:16:10 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-03-28 13:16:12 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-28 13:16:17 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-28 13:16:33 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 45ms (Views: 30.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/restaurants/8" for ::1 at 2021-03-28 13:16:35 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:16:41 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  Rendered restaurants/chefs.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kevinn/turing/mod_2/relational_rails/app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+    <h2><%= @restaurant.name ;@out...
+    ^):
+  
+app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:16:53 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  Rendered restaurants/chefs.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kevinn/turing/mod_2/relational_rails/app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+    <h2><%= @restaurant.name ;@out...
+    ^):
+  
+app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+Started GET "/restaurants/8/edit" for ::1 at 2021-03-28 13:17:01 -0600
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:13
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/8/edit" for ::1 at 2021-03-28 13:17:16 -0600
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:13
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-03-28 13:17:27 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-28 13:17:29 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-28 13:17:31 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.7ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 38ms (Views: 27.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-28 13:17:41 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/9" for ::1 at 2021-03-28 13:17:43 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/9/chefs" for ::1 at 2021-03-28 13:17:45 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"9"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  Rendered restaurants/chefs.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kevinn/turing/mod_2/relational_rails/app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+    <h2><%= @restaurant.name ;@out...
+    ^):
+  
+app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+Started GET "/restaurants" for ::1 at 2021-03-28 13:19:29 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 179ms (Views: 166.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/restaurants/7" for ::1 at 2021-03-28 13:19:32 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/7/chefs" for ::1 at 2021-03-28 13:19:39 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"7"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  Rendered restaurants/chefs.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kevinn/turing/mod_2/relational_rails/app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+    <h2><%= @restaurant.name ;@out...
+    ^):
+  
+app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+Started GET "/" for ::1 at 2021-03-28 13:42:52 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 149ms (Views: 147.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-28 13:42:53 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-28 13:42:57 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.7ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 30ms (Views: 19.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/chefs/14" for ::1 at 2021-03-28 13:42:59 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chefs/14/edit" for ::1 at 2021-03-28 13:43:02 -0600
+Processing by ChefsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:13
+  Rendering chefs/edit.html.erb within layouts/application
+  Rendered chefs/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-28 13:43:06 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/restaurants/8" for ::1 at 2021-03-28 13:43:08 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:43:09 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  Rendered restaurants/chefs.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    3: <a href="/restaurants">.  Restaurants Index  .</a>
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= @restaurant.name %>: Chefs on Staff</h1>
+    7: 
+    8: <% @chefs.each do |chef| %>
+    9:   <h2><%= chef.name %>. ID:<%= chef.id %></h2>
+  
+app/views/restaurants/chefs.html.erb:6:in `_app_views_restaurants_chefs_html_erb___3394111687249511483_70301606818560'
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:43:34 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.0ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.0ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.0ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.0ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.0ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.1ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Chef Load (0.0ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1 LIMIT $2[0m  [["restaurant_id", 8], ["LIMIT", 11]]
+  ↳ /Users/kevinn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendered restaurants/chefs.html.erb within layouts/application (188.4ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaurant' for #<#<Class:0x00007fe0bc398ec0>:0x00007fe0c5177700>
+Did you mean?  restaurants_url):
+    3: <a href="/restaurants">.  Restaurants Index  .</a>
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= restaurant.name %>: Chefs on Staff</h1>
+    7: 
+    8: <% @chefs.each do |chef| %>
+    9:   <h2><%= chef.name %>. ID:<%= chef.id %></h2>
+  
+app/views/restaurants/chefs.html.erb:6:in `_app_views_restaurants_chefs_html_erb___3394111687249511483_70301678037220'
+Started GET "/" for ::1 at 2021-03-28 13:44:07 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-28 13:44:09 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 13:44:11 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:6
+  Rendered suppliers/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 34ms (Views: 20.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/suppliers/2" for ::1 at 2021-03-28 13:44:12 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-28 13:44:19 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-28 13:44:20 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/9" for ::1 at 2021-03-28 13:44:22 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/9/chefs" for ::1 at 2021-03-28 13:44:24 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"9"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-28 13:45:11 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/8" for ::1 at 2021-03-28 13:45:15 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:45:19 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:49:25 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 45ms (Views: 21.7ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:51:02 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:51:39 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:51:47 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:51:49 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:51:49 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:52:30 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/8/chefs" for ::1 at 2021-03-28 13:52:32 -0600
+Processing by RestaurantsController#chefs as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:29
+  Rendering restaurants/chefs.html.erb within layouts/application
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  ↳ app/views/restaurants/chefs.html.erb:8
+  Rendered restaurants/chefs.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-28 14:22:47 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (1.2ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/chefs/14" for ::1 at 2021-03-28 14:22:49 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     7: <p>Years Experience: <%= @chef.experience %></p>
+     8: <p>ID Number: <%= @chef.id %></p>
+     9: <p>Works Days or Nights: <%= @chef.can_close %></p>
+    10: <p>Which Restaurant: <%= @restaurant.id %></p>
+    11: 
+    12: <a href="/chefs/<%= @chef.id %>/edit">Update Chef</a>
+  
+app/views/chefs/show.html.erb:10:in `_app_views_chefs_show_html_erb___2767427893810547408_70301679024460'
+Started GET "/chefs/14" for ::1 at 2021-03-28 14:23:21 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7: <p>Years Experience: <%= @chef.experience %></p>
+     8: <p>ID Number: <%= @chef.id %></p>
+     9: <p>Works Days or Nights: <%= @chef.can_close %></p>
+    10: <p>Which Restaurant: <%= @restaurant.name %></p>
+    11: 
+    12: <a href="/chefs/<%= @chef.id %>/edit">Update Chef</a>
+  
+app/views/chefs/show.html.erb:10:in `_app_views_chefs_show_html_erb___2767427893810547408_70301591523560'
+Started GET "/chefs/14" for ::1 at 2021-03-28 14:23:44 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:10
+Completed 404 Not Found in 26ms (ActiveRecord: 13.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=14):
+  
+app/controllers/chefs_controller.rb:10:in `show'
+Started GET "/chefs/14" for ::1 at 2021-03-28 14:23:47 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:10
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=14):
+  
+app/controllers/chefs_controller.rb:10:in `show'
+Started GET "/chefs/13" for ::1 at 2021-03-28 14:24:02 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:10
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=13):
+  
+app/controllers/chefs_controller.rb:10:in `show'
+Started GET "/restaurants" for ::1 at 2021-03-28 14:36:17 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 33ms (Views: 21.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/restaurants/8" for ::1 at 2021-03-28 14:36:19 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `count' for #<Restaurant:0x00007fe0bd3045a8>):
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= @restaurant.name %></h1>
+    7: <p>Chefs on Staff: <%= @restaurant.count %></p>
+    8: <a href="/restaurants/<%= @restaurant.id %>/chefs">chefs</a>
+    9: <p>Seats: <%= @restaurant.capacity %></p>
+   10: <p>Has a Bar?: <%= @restaurant.has_bar %></p>
+  
+app/views/restaurants/show.html.erb:7:in `_app_views_restaurants_show_html_erb___3770071963332478357_70301611719140'
+Started GET "/restaurants/7" for ::1 at 2021-03-28 14:37:49 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `count' for #<Restaurant:0x00007fe0c042fd30>):
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= @restaurant.name %></h1>
+    7: <p>Chefs on Staff: <%= @restaurant.count %></p>
+    8: <a href="/restaurants/<%= @restaurant.id %>/chefs">chefs</a>
+    9: <p>Seats: <%= @restaurant.capacity %></p>
+   10: <p>Has a Bar?: <%= @restaurant.has_bar %></p>
+  
+app/views/restaurants/show.html.erb:7:in `_app_views_restaurants_show_html_erb___3770071963332478357_70301637437180'
+Started GET "/chefs" for ::1 at 2021-03-28 14:37:55 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.7ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 48ms (Views: 38.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/chefs/15" for ::1 at 2021-03-28 14:37:57 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2021-03-28 14:39:40 -0600
+Processing by ChefsController#index as HTML
+  Rendering chefs/index.html.erb within layouts/application
+  [1m[36mChef Load (0.4ms)[0m  [1m[34mSELECT "chefs".* FROM "chefs"[0m
+  ↳ app/views/chefs/index.html.erb:7
+  Rendered chefs/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/chefs/16" for ::1 at 2021-03-28 14:39:42 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mChef Load (0.2ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7: <p>Years Experience: <%= @chef.experience %></p>
+     8: <p>ID Number: <%= @chef.id %></p>
+     9: <p>Works Days or Nights: <%= @chef.can_close %></p>
+    10: <p>Which Restaurant: <%= @restaurant.name %></p>
+    11: 
+    12: <a href="/chefs/<%= @chef.id %>/edit">Update Chef</a>
+  
+app/views/chefs/show.html.erb:10:in `_app_views_chefs_show_html_erb___2767427893810547408_70301606721440'
+Started GET "/chefs/16" for ::1 at 2021-03-28 14:40:10 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/13" for ::1 at 2021-03-28 14:41:00 -0600
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:9
+  Rendering chefs/show.html.erb within layouts/application
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 14.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/chefs/13/edit" for ::1 at 2021-03-28 14:41:03 -0600
+Processing by ChefsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mChef Load (0.3ms)[0m  [1m[34mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/chefs_controller.rb:14
+  Rendering chefs/edit.html.erb within layouts/application
+  Rendered chefs/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for ::1 at 2021-03-28 14:41:07 -0600
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:7
+  Rendered restaurants/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/restaurants/7" for ::1 at 2021-03-28 14:41:10 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `count' for #<Restaurant:0x00007fe0c51cf2c0>):
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= @restaurant.name %></h1>
+    7: <p>Chefs on Staff: <%= @restaurant.count %></p>
+    8: <a href="/restaurants/<%= @restaurant.id %>/chefs">chefs</a>
+    9: <p>Seats: <%= @restaurant.capacity %></p>
+   10: <p>Has a Bar?: <%= @restaurant.has_bar %></p>
+  
+app/views/restaurants/show.html.erb:7:in `_app_views_restaurants_show_html_erb___3770071963332478357_70301678189140'
+Started GET "/restaurants/7" for ::1 at 2021-03-28 14:41:38 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= @restaurant.name %></h1>
+    7: <p>Chefs on Staff: <%= @chefs.count %></p>
+    8: <a href="/restaurants/<%= @restaurant.id %>/chefs">chefs</a>
+    9: <p>Seats: <%= @restaurant.capacity %></p>
+   10: <p>Has a Bar?: <%= @restaurant.has_bar %></p>
+  
+app/views/restaurants/show.html.erb:7:in `_app_views_restaurants_show_html_erb___3770071963332478357_70301612061980'
+Started GET "/restaurants/9" for ::1 at 2021-03-28 14:41:55 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+    4: <a href="/chefs">.  Chefs Index</a>
+    5: 
+    6: <h1><%= @restaurant.name %></h1>
+    7: <p>Chefs on Staff: <%= @chef.count %></p>
+    8: <a href="/restaurants/<%= @restaurant.id %>/chefs">chefs</a>
+    9: <p>Seats: <%= @restaurant.capacity %></p>
+   10: <p>Has a Bar?: <%= @restaurant.has_bar %></p>
+  
+app/views/restaurants/show.html.erb:7:in `_app_views_restaurants_show_html_erb___3770071963332478357_70301637763780'
+Started GET "/restaurants/7" for ::1 at 2021-03-28 14:43:08 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 7]]
+  ↳ app/views/restaurants/show.html.erb:7
+  Rendered restaurants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 15.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/restaurants/7" for ::1 at 2021-03-28 14:43:58 -0600
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:9
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "chefs" WHERE "chefs"."restaurant_id" = $1[0m  [["restaurant_id", 7]]
+  ↳ app/views/restaurants/show.html.erb:7
+  Rendered restaurants/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
