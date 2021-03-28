@@ -11,6 +11,8 @@ class SuppliersController < ApplicationController
 
   def supply_trucks
     @supply_trucks = SupplyTruck.where(supplier_id: params[:id])
+    @supplier = Supplier.find(params[:id])
+
   end
 
 end

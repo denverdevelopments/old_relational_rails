@@ -7232,3 +7232,539 @@ SyntaxError (/Users/kevinn/turing/mod_2/relational_rails/app/views/restaurants/c
     ^):
   
 app/views/restaurants/chefs.html.erb:10: syntax error, unexpected '<'
+Started GET "/" for ::1 at 2021-03-28 13:11:11 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 159ms (Views: 156.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/eats" for ::1 at 2021-03-28 13:11:14 -0600
+Processing by EatsController#index as HTML
+  Rendering eats/index.html.erb within layouts/application
+  Rendered eats/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-28 13:11:17 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 13:11:20 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.7ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:6
+  Rendered suppliers/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 32ms (Views: 19.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:11:22 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/suppliers/4/supply_trucks" for ::1 at 2021-03-28 13:11:36 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"4"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (1.0ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:1
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 36ms (Views: 19.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:12:35 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/5" for ::1 at 2021-03-28 13:12:43 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/5/supply_trucks" for ::1 at 2021-03-28 13:12:51 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"5"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.5ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 5]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:1
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:13:02 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/6" for ::1 at 2021-03-28 13:13:11 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:13:17 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/suppliers/6" for ::1 at 2021-03-28 13:13:46 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/suppliers/6supply_trucks" for ::1 at 2021-03-28 13:13:51 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"6supply_trucks"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/6supply_trucks" for ::1 at 2021-03-28 13:13:55 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"6supply_trucks"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:14:00 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.5ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:1
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/suppliers/6" for ::1 at 2021-03-28 13:37:59 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 180ms (Views: 150.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:38:01 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.5ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 6], ["LIMIT", 11]]
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE SupplyTruck Load (0.0ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 6], ["LIMIT", 11]]
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE SupplyTruck Load (0.0ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 6], ["LIMIT", 11]]
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE SupplyTruck Load (0.0ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1 LIMIT $2[0m  [["supplier_id", 6], ["LIMIT", 11]]
+  ↳ /Users/wyattwicks/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (110.7ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `suppliers' for #<#<Class:0x00007f8c79c54ec0>:0x00007f8c81205ac0>):
+    1: <a href="/">Home</a>
+    2: <a href="/eats">Restaurants & Chefs</a>
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= suppliers.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+  
+app/views/suppliers/supply_trucks.html.erb:4:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120719266300'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:38:28 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <a href="/">Home</a>
+    2: <a href="/eats">Restaurants & Chefs</a>
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @supplier.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+  
+app/views/suppliers/supply_trucks.html.erb:4:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120668199380'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:38:51 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <a href="/">Home</a>
+    2: <a href="/eats">Restaurants & Chefs</a>
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @suppliers.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+  
+app/views/suppliers/supply_trucks.html.erb:4:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120663388280'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:38:51 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <a href="/">Home</a>
+    2: <a href="/eats">Restaurants & Chefs</a>
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @suppliers.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+  
+app/views/suppliers/supply_trucks.html.erb:4:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120645567740'
+Started GET "/suppliers/6" for ::1 at 2021-03-28 13:39:38 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.8ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 16.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:39:39 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+Completed 404 Not Found in 6ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Supplier without an ID):
+  
+app/controllers/suppliers_controller.rb:14:in `supply_trucks'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:40:00 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.5ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `driver_name' for nil:NilClass):
+    4: <h1> Supplier: <%= @supplier_name.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+    8:   <p>Daily Deliveries: <%= @supply_truck.number_of_daily_deliveries %></p>
+    9:   <p>Refrigerated?: <%= @supply_truck.refrigerated %></p>
+   10: <% end %>
+  
+app/views/suppliers/supply_trucks.html.erb:7:in `block in _app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120661744600'
+app/views/suppliers/supply_trucks.html.erb:5:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120661744600'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:40:43 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  [1m[36mSupplyTruck Load (0.2ms)[0m  [1m[34mSELECT  "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:15
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 46ms (Views: 19.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:42:05 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.4ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 9.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @supplier_name.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= @supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+    8:   <p>Daily Deliveries: <%= @supply_truck.number_of_daily_deliveries %></p>
+    9:   <p>Refrigerated?: <%= @supply_truck.refrigerated %></p>
+  
+app/views/suppliers/supply_trucks.html.erb:6:in `block in _app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120645174980'
+app/views/suppliers/supply_trucks.html.erb:5:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120645174980'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:42:44 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<SupplyTruck::ActiveRecord_Relation:0x00007f8c81284b68>):
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @supplier_name.name %>
+    5: <% @supply_trucks.each do |supply_trucks| %>
+    6:   <h2>Truck: <%= @supply_trucks.id %></h2>
+    7:   <h3>Driver: <%= @supply_trucks.driver_name %></h3>
+    8:   <p>Daily Deliveries: <%= @supply_trucks.number_of_daily_deliveries %></p>
+    9:   <p>Refrigerated?: <%= @supply_trucks.refrigerated %></p>
+  
+app/views/suppliers/supply_trucks.html.erb:6:in `block in _app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120719497220'
+app/views/suppliers/supply_trucks.html.erb:5:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120719497220'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:43:16 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @supplier_name.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= @supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+    8:   <p>Daily Deliveries: <%= @supply_truck.number_of_daily_deliveries %></p>
+    9:   <p>Refrigerated?: <%= @supply_truck.refrigerated %></p>
+  
+app/views/suppliers/supply_trucks.html.erb:6:in `block in _app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120718626480'
+app/views/suppliers/supply_trucks.html.erb:5:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120718626480'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:43:24 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @supplier_name.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= @supply_truck.id %></h2>
+    7:   <h3>Driver: <%= @supply_truck.driver_name %></h3>
+    8:   <p>Daily Deliveries: <%= @supply_truck.number_of_daily_deliveries %></p>
+    9:   <p>Refrigerated?: <%= @supply_truck.refrigerated %></p>
+  
+app/views/suppliers/supply_trucks.html.erb:6:in `block in _app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120719231220'
+app/views/suppliers/supply_trucks.html.erb:5:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120719231220'
+Started GET "/suppliers/6/supply_trucks" for ::1 at 2021-03-28 13:44:07 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.2ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 6]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-03-28 13:44:17 -0600
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:46:38 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/suppliers/4/supply_trucks" for ::1 at 2021-03-28 13:46:40 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.4ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/suppliers/4/supply_trucks" for ::1 at 2021-03-28 13:49:23 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/supply_side" for ::1 at 2021-03-28 13:50:53 -0600
+Processing by SupplySideController#index as HTML
+  Rendering supply_side/index.html.erb within layouts/application
+  Rendered supply_side/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suppliers" for ::1 at 2021-03-28 13:51:00 -0600
+Processing by SuppliersController#index as HTML
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:7
+  Rendered suppliers/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 28ms (Views: 19.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/suppliers/4" for ::1 at 2021-03-28 13:51:01 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/suppliers/4/supply_trucks" for ::1 at 2021-03-28 13:51:02 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <a href="/">Home</a>
+    2: <a href="/eats">Restaurants & Chefs</a>
+    3: <a href="/suppliers">Supplier Index</a>
+    4: <h1> Supplier: <%= @supplier_name.name %>
+    5: <% @supply_trucks.each do |supply_truck| %>
+    6:   <h2>Truck: <%= supply_truck.id %></h2>
+    7:   <h3>Driver: <%= supply_truck.driver_name %></h3>
+  
+app/views/suppliers/supply_trucks.html.erb:4:in `_app_views_suppliers_supply_trucks_html_erb___1878552323206338761_70120649319660'
+Started GET "/suppliers/4/supply_trucks" for ::1 at 2021-03-28 13:51:14 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 4]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/suppliers/5" for ::1 at 2021-03-28 13:51:19 -0600
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:9
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/suppliers/5/supply_trucks" for ::1 at 2021-03-28 13:51:21 -0600
+Processing by SuppliersController#supply_trucks as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:14
+  Rendering suppliers/supply_trucks.html.erb within layouts/application
+  [1m[36mSupplyTruck Load (0.3ms)[0m  [1m[34mSELECT "supply_trucks".* FROM "supply_trucks" WHERE "supply_trucks"."supplier_id" = $1[0m  [["supplier_id", 5]]
+  ↳ app/views/suppliers/supply_trucks.html.erb:5
+  Rendered suppliers/supply_trucks.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.6ms)
+
+
