@@ -2,7 +2,7 @@
 
 class SuppliersController < ApplicationController
   def index
-     @suppliers = Supplier.all
+     @suppliers = Supplier.order("Created_at ASC")
   end
 
   def show
