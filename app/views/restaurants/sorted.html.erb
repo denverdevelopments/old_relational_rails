@@ -3,9 +3,7 @@
 <a href="/restaurants">.  Restaurants Index  .</a>
 <a href="/chefs">.  Chefs Index</a>
 
-<h1>Chefs at: <%= @restaurant.name %></h1>
-
-<a href="/restaurants/<%= @restaurant.id %>/sorted">Sorted Chefs Index</a>
+<h1>Chefs Alphabetically at: <%= @restaurant.name %></h1>
 
 <% @chefs.each do |chef| %>
   <h3><%= chef.name %>. ID:<%= chef.id %></h3>

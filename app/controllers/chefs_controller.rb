@@ -5,9 +5,13 @@ class ChefsController < ApplicationController
     @chefs = Chef.all
   end
 
+  def new
+  end
+
   def show
     @chef = Chef.find(params[:id])
-    # @restaurants = Restaurant.where(id: params[:restaurant_id])
+    @restaurant = @chef.restaurant
+    #OR @restaurant = Restaurant.find(@chef.restaurant_id)
   end
 
   def edit
