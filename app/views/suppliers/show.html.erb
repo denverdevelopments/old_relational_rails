@@ -1,4 +1,3 @@
-<%# app/views/suppliers/show.html.erb %>
 <a href="/">Home</a>
 <a href="/eats">Restaurants & Chefs</a>
 <a href="/supply_trucks">Supply Truck Index</a>
@@ -6,5 +5,7 @@
 <h1><%= @supplier.name %></h1>
 <p>Number of Employees: <%= @supplier.number_of_employees %></p>
 <p>Open Weekends?: <%= @supplier.open_weekends %></p>
-<p> Supply Trucks: <%=@supply_trucks.count %></p>
+<p>Supply Trucks: <%= @supply_trucks.count %></p>
 <a href="/suppliers/<%= @supplier.id %>/supply_trucks">Supply Trucks</a>
+</br>
+<a href="/suppliers/<%= @supplier.id %>/edit">Edit Supplier</a>

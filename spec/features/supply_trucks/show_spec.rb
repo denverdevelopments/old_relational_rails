@@ -10,7 +10,7 @@ RSpec.describe 'As a visitor' do
 
       expect(page).to have_content(kevinsupplytruck1.id)
       expect(page).to have_content(kevinsupplytruck1.driver_name)
-      expect(page).to have_content(kevinsupplytruck1.naumber_of_daily_deliveries)
+      expect(page).to have_content(kevinsupplytruck1.number_of_daily_deliveries)
       expect(page).to have_content(kevinsupplytruck1.refrigerated)
     end
   end

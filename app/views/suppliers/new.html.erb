@@ -1,0 +1,17 @@
+<a href="/">Home</a>
+<a href="/eats">Restaurants & Chefs</a>
+<a href="/supply_trucks">Supply Truck Index</a>
+<a href="/suppliers"> Supplier Index</a>
+
+<%= form_with url:"/suppliers", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %></br>
+
+  <%=form.label 'Number of Employees' %>
+  <%= form.number_field :number_of_employees %></br>
+
+  <%= form.label 'Open Weekends' %>
+  <%= form.check_box :open_weekends %></br>
+
+  <%= form.submit 'Create New Supplier' %>
+<% end %>

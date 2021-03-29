@@ -1,4 +1,4 @@
-
+<%# %>
 <a href="/">Home</a>
 <a href="/eats">Restaurants & Chefs</a>
 <a href="/supply_trucks">Supply Truck Index</a>
@@ -6,4 +6,14 @@
 <h1>All Suppliers</h1>
 <h1><% @suppliers.each do |supplier| %><h1>
   <h2><a href="/suppliers/<%= supplier.id %>"><%= supplier.name %></a> Created at <%=supplier.created_at %></h2>
+
+<form action="/suppliers/<%= supplier.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="Delete this Supplier"/>
+</form>
+<br>
 <% end %>
+
+<br>
+<h3><a href="/suppliers/new"> Create New Supplier</a><h3>
