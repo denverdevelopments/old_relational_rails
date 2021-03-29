@@ -1,0 +1,12 @@
+<%= form_with url: "/restaurants", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %></br>
+
+  <%= form.label 'Capacity' %>
+  <%= form.number_field :capacity %></br>
+
+  <%= form.label 'Has a Bar' %>
+  <%= form.check_box :has_bar %></br>
+
+  <%= form.submit 'Open Restaurant' %>
+<% end %>

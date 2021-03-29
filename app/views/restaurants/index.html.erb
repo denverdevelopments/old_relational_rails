@@ -6,7 +6,21 @@
 
 <% @restaurants.each do |restaurant| %>
   <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h3>
-  <p>Serves Alcohol?: <%= restaurant.has_bar %></p>
+  <% if restaurant.has_bar %>
+    <p>Does Serve Alcohol</p>
+  <% else %>
+    <p>Does Not Serve Alcohol</p>
+  <% end %>
   <p>Created on: <%= restaurant.created_at %></p>
+
+  <form action="/restaurants/<%= restaurant.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete this Restaurant"/>
+  </form>
   <br>
+
 <% end %>
+
+<br>
+<h3><a href="/restaurants/new">OPEN a new Restaurant</a></h3>

@@ -7,6 +7,6 @@
 <p>Years Experience: <%= @chef.experience %></p>
 <p>ID Number: <%= @chef.id %></p>
 <p>Works Days or Nights: <%= @chef.can_close %></p>
-<p>Which Restaurant: </p>
+<p>Which Restaurant: <%= @restaurant.name %></p>
 
 <a href="/chefs/<%= @chef.id %>/edit">Update Chef</a>
