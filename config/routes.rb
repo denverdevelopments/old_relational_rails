@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   #wyatt routes
   get '/supply_side', to: 'supply_side#index'
+
   get '/suppliers', to: 'suppliers#index'
   get '/suppliers/new', to: 'suppliers#new'
   post '/suppliers', to: 'suppliers#create'
@@ -16,7 +17,13 @@ Rails.application.routes.draw do
   get '/suppliers/:id/supply_trucks', to: 'suppliers#supply_trucks'
 
   get '/supply_trucks', to: 'supply_trucks#index'
+  get '/supply_trucks/new', to: 'supply_trucks#new'
+  post '/supply_trucks', to: 'supply_trucks#create'
+  get '/supply_trucks/true', to: 'supply_trucks#true'
+  delete '/supply_trucks/:id', to: 'supply_trucks#destroy'
   get '/supply_trucks/:id', to: 'supply_trucks#show'
+  get '/supply_trucks/:id/edit', to: 'supply_trucks#edit'
+  patch '/supply_trucks/:id', to: 'supply_trucks#update'
 
 
 

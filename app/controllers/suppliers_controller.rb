@@ -31,9 +31,6 @@ class SuppliersController < ApplicationController
 
   def destroy
     @supplier = Supplier.find(params[:id])
-    # @truck = @supplier.supply_trucks
-    # # require "pry";binding.pry
-    # @truck.destroy_all
     @supplier.destroy
     redirect_to '/suppliers'
   end

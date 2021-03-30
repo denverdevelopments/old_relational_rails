@@ -1,0 +1,10 @@
+<%# %>
+<a href="/">Home</a>
+<a href="/eats">Restaurants & Chefs</a>
+<a href="/suppliers">Supplier Index</a>
+
+<h2> Refrigerated Supply Trucks </h2>
+
+<% @supply_trucks.each do |supply_truck| %>
+  <h3>Supply Truck: <%= supply_truck.id %></h3>
+<% end %>
