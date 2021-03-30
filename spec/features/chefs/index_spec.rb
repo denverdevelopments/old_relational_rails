@@ -6,14 +6,14 @@ RSpec.describe 'Chef Index' do
     wicks = Restaurant.create!(name: "Wicks Saloon n' Honkytonk", capacity: 95, has_bar: true)
     miller = Restaurant.create!(name: "Miller Brew Pub", capacity: 48, has_bar: true)
 
-    @kevon = tgik.chefs.create!(name: "Kevon Loron", experience: 4, can_close: false)
-    @rordon = tgik.chefs.create!(name: "Rordon Gamsey", experience: 3, can_close: true)
-    @chulia = tgik.chefs.create!(name: "Chulia Jild", experience: 9, can_close: false)
+    @kevon = tgik.chefs.create!(name: "Kevon Loron", experience: 4, desserts: false)
+    @rordon = tgik.chefs.create!(name: "Rordon Gamsey", experience: 3, desserts: true)
+    @chulia = tgik.chefs.create!(name: "Chulia Jild", experience: 9, desserts: false)
 
-    @earp = wicks.chefs.create!(name: "Earp Wyatt", experience: 7, can_close: false)
-    @jessie = wicks.chefs.create!(name: "Jessie Holiday", experience: 2, can_close: false)
+    @earp = wicks.chefs.create!(name: "Earp Wyatt", experience: 7, desserts: false)
+    @jessie = wicks.chefs.create!(name: "Jessie Holiday", experience: 2, desserts: false)
 
-    @jacque = miller.chefs.create!(name: "Jacque Milair", experience: 6, can_close: true)
+    @jacque = miller.chefs.create!(name: "Jacque Milair", experience: 6, desserts: true)
   end
 
   it 'shows all chefs' do

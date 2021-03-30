@@ -9,6 +9,14 @@ RSpec.describe 'Welcome Index', type: :feature do
           click_link 'Supply Side'
           expect(current_path).to eq("/supply_side")
         end
+
+        it 'shows links eats side' do
+          visit '/'
+
+          click_link 'Restaurants & Chefs'
+          expect(current_path).to eq("/eats")
+        end
+
     end
   end
 end
