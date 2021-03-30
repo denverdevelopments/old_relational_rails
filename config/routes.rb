@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get '/chefs', to: 'chefs#index'
   post '/chefs', to: 'chefs#create'
   get '/chefs/new', to: 'chefs#new'
+  get '/chefs/true', to: 'chefs#true'
   get '/chefs/:id', to: "chefs#show"
   get '/chefs/:id/edit', to: 'chefs#edit'
   patch '/chefs/:id', to: 'chefs#update'

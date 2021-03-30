@@ -25,6 +25,7 @@ class ChefsController < ApplicationController
 
   def index
     @chefs = Chef.all
+    # @restaurant = @chef.restaurant
   end
 
   def new
@@ -34,6 +35,12 @@ class ChefsController < ApplicationController
     @chef = Chef.find(params[:id])
     @restaurant = @chef.restaurant
     #OR @restaurant = Restaurant.find(@chef.restaurant_id)
+  end
+
+  def true
+    @chefs = Chef.find(params[:desserts] = true)
+    # @restaurant = Restaurant.find(params[:id])
+    # @chefs = @restaurant.chefs.order(:name)
   end
 
   def update

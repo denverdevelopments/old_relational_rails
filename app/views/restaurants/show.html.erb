@@ -1,7 +1,8 @@
 <%# app/views/restaurants/show.html.erb %>
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Inde   .</a>
-<a href="/chefs">.  Chefs Index</a>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h1><%= @restaurant.name %></h1>
 <p>Chefs on Staff: <%= @chefs.count %></p>

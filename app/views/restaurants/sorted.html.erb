@@ -1,12 +1,12 @@
-<%# app/views/restaurants/chefs.html.erb %>
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index  .</a>
-<a href="/chefs">.  Chefs Index</a>
+<%# app/views/restaurants/sorted.html.erb %>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h1>Chefs Alphabetically at: <%= @restaurant.name %></h1>
 
 <% @chefs.each do |chef| %>
   <h3><%= chef.name %>. ID:<%= chef.id %></h3>
-  <h4>Can close?: <%= chef.can_close %></h4>
-  <br>
+  <h4>Can close?: <%= chef.can_close %></h4><br/>
 <% end %>

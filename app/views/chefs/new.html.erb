@@ -1,6 +1,6 @@
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index  .</a>
-<a href="/chefs">.  Chefs Index</a><br/><br/>
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h3>NEW CHEF</h3><br/>
 <%= form_with url: "/chefs", method: :post, local: true do |form| %>

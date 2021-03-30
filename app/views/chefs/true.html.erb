@@ -1,0 +1,11 @@
+<%# app/views/chefs/true.html.erb %>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %>
+
+<h2>Chefs with Desserts</h2>
+
+<% @chefs.each do |chef| %>
+  <h3><%= chef.name %>. ID:<%= chef.id %></h3><br/>
+<% end %>

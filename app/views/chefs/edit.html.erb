@@ -1,16 +1,16 @@
 <%# app/views/chefs/edit.html.erb %>
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index  .</a>
-<a href="/chefs">.  Chefs Index</a>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <form action="/chefs/<%= @chef.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Chef:</p><br/>
-  NAME:  <input type='text' name='chef[name]' value="<%= @chef.name %>"/><br/>
-  YEARS EXPERIENCE:  <input type='integer' capacity='chef[experience]' value="<%= @chef.experience %>"/><br/>
-  <p>MAKES DESSERT?</p>
-  <input type='boolean' has_bar='chef[desserts]' value="<%= @chef.can_close %>"/><br/>
+  <h2>Update Chef</h2><br/>
+  NAME:  <input type='text' name='chef[name]' value="<%= @chef.name %>"/><br/><br/>
+  YEARS EXPERIENCE:  <input type='integer' capacity='chef[experience]' value="<%= @chef.experience %>"/><br/><br/>
+  MAKES DESSERT?:  <input type='boolean' has_bar='chef[desserts]' value="<%= @chef.desserts %>"/><br/>
   <br>
   <input type='submit'/>
 </form>

@@ -1,18 +1,13 @@
 <%# app/views/chefs/index.html.erb %>
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index</a>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to "Restaurants Index", "/restaurants" %>
 
 <h2>All Chefs</h2>
 
 <% @chefs.each do |chef| %>
-<h3><a href="/chefs/<%= chef.id %>"><%= chef.name %></a></h3>
-  <p>Years Experience: <%= chef.experience %></p>
+<h3><a href="/chefs/<%= chef.id %>"><%= chef.name %></a>.  .  .<a href="/chefs/<%= chef.id %>/edit"> (update)</a></h3>
+  <p>Experience (yrs): <%= chef.experience %></p><br/>
+<% end %><br/>
 
-  <form action="/chefs/<%= chef.id %>" method="POST">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete this Chef"/>
-  </form>
-  <br>
-
-<% end %>
+<a href="/chefs/true"> True Records</a>

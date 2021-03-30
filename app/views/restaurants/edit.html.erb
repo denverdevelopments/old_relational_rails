@@ -1,12 +1,13 @@
 <%# app/views/restaurants/edit.html.erb %>
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index  .</a>
-<a href="/chefs">.  Chefs Index</a>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <form action="/restaurants/<%= @restaurant.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Restaurant:</p><br/>
+  <h2>Update Restaurant</h2><br/>
   NAME:  <input type='text' name='restaurant[name]' value="<%= @restaurant.name %>"/><br/><br/>
   SEAT CAPACITY:  <input type='integer' name='restaurant[capacity]' value="<%= @restaurant.capacity %>"/><br/><br/>
   HAS A BAR?:  <input type='boolean' name='restaurant[has_bar]' value="<%= @restaurant.has_bar %>"/><br/><br/>

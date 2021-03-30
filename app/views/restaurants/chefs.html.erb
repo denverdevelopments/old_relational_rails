@@ -1,7 +1,8 @@
 <%# app/views/restaurants/chefs.html.erb %>
-<a href="/">Home  .</a>
-<a href="/restaurants">.  Restaurants Index  .</a>
-<a href="/chefs">.  Chefs Index</a>
+
+<%= link_to "Home  .", "/" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h1>Chefs at: <%= @restaurant.name %></h1>
 
