@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe 'Welcome Index', type: :feature do
   describe 'As a visitor' do
     describe 'When I visit welcome page' do
-        it 'shows links to supply side and restaurants side' do
+        it 'shows links to supply side' do
           visit '/'
 
           # expect(page).to have_selector(:css, 'a[href="localhost:3000/supply_side"]')
@@ -16,7 +16,6 @@ RSpec.describe 'Welcome Index', type: :feature do
           click_link 'Restaurants & Chefs'
           expect(current_path).to eq("/eats")
         end
-
     end
   end
 end

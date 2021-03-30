@@ -6,7 +6,7 @@ RSpec.describe 'As a visitor' do
       tgik = Restaurant.create!(name: "TGI Kevin's", capacity: 220, has_bar: false)
 
       visit "/restaurants/#{tgik.id}"
-      expect(page).to have_content(tgik.id)
+      # expect(page).to have_content(tgik.id)
       expect(page).to have_content(tgik.name)
       expect(page).to have_content(tgik.capacity)
       # expect(page).to have_content(tgik.has_bar)

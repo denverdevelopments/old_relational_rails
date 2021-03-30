@@ -40,8 +40,8 @@ class SupplyTrucksController < ApplicationController
   def new
   end
 
-  def true
-    @supply_trucks = SupplyTruck.where(params[:refrigerated] == true)
-  end
+  # def true
+  #   @supply_trucks = SupplyTruck.where(params[:refrigerated] = true)
+  # end
 
 end
