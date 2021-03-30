@@ -6,12 +6,10 @@
 <form action="/restaurants/<%= @restaurant.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Restaurant:</p>
-  <input type='text' name='restaurant[name]' value="<%= @restaurant.name %>"/><br/>
-  <p>Number of Seats</p>
-  <input type='integer' capacity='restaurant[capacity]' value="<%= @restaurant.capacity %>"/><br/>
-  <p>Has a Bar?</p>
-  <input type='boolean' has_bar='restaurant[has_bar]' value="<%= @restaurant.has_bar %>"/><br/>
+  <p>Update Restaurant:</p><br/>
+  NAME:  <input type='text' name='restaurant[name]' value="<%= @restaurant.name %>"/><br/><br/>
+  SEAT CAPACITY:  <input type='integer' name='restaurant[capacity]' value="<%= @restaurant.capacity %>"/><br/><br/>
+  HAS A BAR?:  <input type='boolean' name='restaurant[has_bar]' value="<%= @restaurant.has_bar %>"/><br/><br/>
   <br>
-  <input type='submit'/>
+  <input type='Submit'/>
 </form>

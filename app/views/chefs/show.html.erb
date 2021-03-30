@@ -6,7 +6,17 @@
 <h1><%= @chef.name %></h1>
 <p>Years Experience: <%= @chef.experience %></p>
 <p>ID Number: <%= @chef.id %></p>
-<p>Works Days or Nights: <%= @chef.can_close %></p>
-<p>Which Restaurant: <%= @restaurant.name %></p>
+<% if @chef.desserts %>
+  <p>Makes Artisan Desserts</p>
+<% else %>
+  <p>No Artisan Desserts</p>
+<% end %>
+<p>Primary Restaurant: <%= @restaurant.name %></p><br/>
 
-<a href="/chefs/<%= @chef.id %>/edit">Update Chef</a>
+<a href="/chefs/<%= @chef.id %>/edit">Update Chef</a><br/><br/>
+
+<form action="/chefs/<%= @chef.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="Delete this Chef"/>
+</form>

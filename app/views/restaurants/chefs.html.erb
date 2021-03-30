@@ -8,7 +8,12 @@
 <a href="/restaurants/<%= @restaurant.id %>/sorted">Sorted Chefs Index</a>
 
 <% @chefs.each do |chef| %>
-  <h3><%= chef.name %>. ID:<%= chef.id %></h3>
-  <h4>Can close?: <%= chef.can_close %></h4>
+  <h3><%= chef.name %> (ID: #<%= chef.id %>)</h3>
+  <h4>Years of Experience: <%= chef.experience %></h4>
+  <% if chef.desserts %>
+    <p>Makes Dessert</p>
+  <% else %>
+    <p>No Dessert</p>
+  <% end %>
   <br>
 <% end %>

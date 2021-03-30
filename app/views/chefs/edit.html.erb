@@ -6,12 +6,11 @@
 <form action="/chefs/<%= @chef.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Chef:</p>
-  <input type='text' name='chef[name]' value="<%= @chef.name %>"/><br/>
-  <p>Years of Experience</p>
-  <input type='integer' capacity='chef[experience]' value="<%= @chef.experience %>"/><br/>
-  <p>Has a Bar?</p>
-  <input type='boolean' has_bar='chef[can_close]' value="<%= @chef.can_close %>"/><br/>
+  <p>Update Chef:</p><br/>
+  NAME:  <input type='text' name='chef[name]' value="<%= @chef.name %>"/><br/>
+  YEARS EXPERIENCE:  <input type='integer' capacity='chef[experience]' value="<%= @chef.experience %>"/><br/>
+  <p>MAKES DESSERT?</p>
+  <input type='boolean' has_bar='chef[desserts]' value="<%= @chef.can_close %>"/><br/>
   <br>
   <input type='submit'/>
 </form>

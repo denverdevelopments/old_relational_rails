@@ -20,10 +20,6 @@ Rails.application.routes.draw do
 
 
 
-
-
-
-
   #kevin routes
   get '/eats', to: 'eats#index'
   get '/restaurants', to: 'restaurants#index'
@@ -39,9 +35,14 @@ Rails.application.routes.draw do
   get '/restaurants/:id/chefs', to: 'restaurants#chefs'
 
   get '/chefs', to: 'chefs#index'
+  post '/chefs', to: 'chefs#create'
+  get '/chefs/new', to: 'chefs#new'
   get '/chefs/:id', to: "chefs#show"
   get '/chefs/:id/edit', to: 'chefs#edit'
   patch '/chefs/:id', to: 'chefs#update'
+  delete '/chefs/:id', to: 'chefs#destroy'
+
+
 end
 
 # get '/tasks', to: 'tasks#index'

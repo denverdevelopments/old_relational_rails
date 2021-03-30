@@ -7,9 +7,9 @@
 <% @restaurants.each do |restaurant| %>
   <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></h3>
   <% if restaurant.has_bar %>
-    <p>Does Serve Alcohol</p>
+    <p>Serves Alcohol</p>
   <% else %>
-    <p>Does Not Serve Alcohol</p>
+    <p>No Alcohol</p>
   <% end %>
   <p>Created on: <%= restaurant.created_at %></p>
 

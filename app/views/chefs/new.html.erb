@@ -1,0 +1,17 @@
+<a href="/">Home  .</a>
+<a href="/restaurants">.  Restaurants Index  .</a>
+<a href="/chefs">.  Chefs Index</a><br/><br/>
+
+<h3>NEW CHEF</h3><br/>
+<%= form_with url: "/chefs", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br/><br/>
+
+  <%= form.label 'Experience' %>
+  <%= form.number_field :experience %><br/><br/>
+
+  <%= form.label 'Has Desserts' %>
+  <%= form.check_box :desserts %><br/><br/>
+
+  <%= form.submit 'Hire a Chef' %>
+<% end %>

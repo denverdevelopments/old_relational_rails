@@ -1,12 +1,17 @@
+<a href="/">Home  .</a>
+<a href="/restaurants">.  Restaurants Index  .</a>
+<a href="/chefs">.  Chefs Index</a><br/><br/>
+
+<h3>NEW RESTAURANT</h3><br/>
 <%= form_with url: "/restaurants", method: :post, local: true do |form| %>
   <%= form.label :name %>
-  <%= form.text_field :name %></br>
+  <%= form.text_field :name %><br/><br/>
 
   <%= form.label 'Capacity' %>
-  <%= form.number_field :capacity %></br>
+  <%= form.number_field :capacity %><br/><br/>
 
   <%= form.label 'Has a Bar' %>
-  <%= form.check_box :has_bar %></br>
+  <%= form.check_box :has_bar %><br/><br/>
 
   <%= form.submit 'Open Restaurant' %>
 <% end %>

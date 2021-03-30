@@ -2,9 +2,17 @@
 <a href="/">Home  .</a>
 <a href="/restaurants">.  Restaurants Index</a>
 
-<h1>All Chefs</h1>
+<h2>All Chefs</h2>
 
 <% @chefs.each do |chef| %>
-<h2><a href="/chefs/<%= chef.id %>"><%= chef.name %></a></h2>
+<h3><a href="/chefs/<%= chef.id %>"><%= chef.name %></a></h3>
   <p>Years Experience: <%= chef.experience %></p>
+
+  <form action="/chefs/<%= chef.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete this Chef"/>
+  </form>
+  <br>
+
 <% end %>

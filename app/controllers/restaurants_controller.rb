@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
   def destroy
     Restaurant.destroy(params[:id])
     @fired = Chef.where(restaurant_id: params[:id])
-    @fired.destroy    #destroy staff Chefs
+    @fired.destroy_all
     redirect_to '/restaurants'
   end
 

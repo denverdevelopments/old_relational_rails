@@ -5,8 +5,21 @@
 
 <h1><%= @restaurant.name %></h1>
 <p>Chefs on Staff: <%= @chefs.count %></p>
-<a href="/restaurants/<%= @restaurant.id %>/chefs">- chef's names</a>
-<p>Seats: <%= @restaurant.capacity %></p>
-<p>Has a Bar?: <%= @restaurant.has_bar %></p>
+<a href="/restaurants/<%= @restaurant.id %>/chefs">.  .  see Chefs</a><br/><br/>
 
-<a href="/restaurants/<%= @restaurant.id %>/edit">Update Restaurant</a>
+<p>Seats: <%= @restaurant.capacity %></p>
+<% if @restaurant.has_bar %>
+  <p>Has a Bar</p>
+<% else %>
+  <p>Does Not Have a Bar</p>
+<% end %><br/>
+
+<h4><a href="/chefs/new">Hire a new Chef</a></h4><br/>
+
+<a href="/restaurants/<%= @restaurant.id %>/edit">Update Restaurant</a><br/><br/>
+
+<form action="/restaurants/<%= @restaurant.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="Delete this Restaurant"/>
+</form>
