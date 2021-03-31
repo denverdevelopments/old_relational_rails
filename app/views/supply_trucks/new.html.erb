@@ -5,13 +5,13 @@
 
 <%= form_with url:"/supply_trucks", method: :post, local: true do |form| %>
   <%= form.label :driver_name %>
-  <%= form.text_field :driver_name, @supply_truck.driver_name %></br>
+  <%= form.text_field :driver_name %></br>
 
   <%=form.label 'Number of Daily Deliveries' %>
-  <%= form.number_field :number_of_daily_deliveries, @supply_truck.number_of_daily_deliveries %></br>
+  <%= form.number_field :number_of_daily_deliveries %></br>
 
   <%= form.label 'Refrigerated?' %>
-  <%= form.check_box :refrigerated, @supply_truck.refrigerated %></br>
+  <%= form.check_box :refrigerated %></br>
 
   <%= form.submit 'Create New Supply Truck' %>
 

@@ -3,13 +3,12 @@ class SupplyTrucksController < ApplicationController
     @supply_trucks = SupplyTruck.all
   end
 
-
-
   def show
     @supply_truck = SupplyTruck.find(params[:id])
   end
 
   def create
+    # supplier = Supplier.find(params[:id])
     supply_truck = SupplyTruck.new({
       driver_name: params[:driver_name],
       number_of_daily_deliveries: params[:number_of_daily_deliveries],

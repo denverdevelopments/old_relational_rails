@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post '/suppliers/:id/supply_trucks', to: 'supply_trucks#create'
 
   get '/supply_trucks', to: 'supply_trucks#index'
-  # post '/supply_trucks', to: 'supply_trucks#create'
+  post '/supply_trucks', to: 'supply_trucks#create'
   get '/supply_trucks/true', to: 'supply_trucks#true'
   delete '/supply_trucks/:id', to: 'supply_trucks#destroy'
   get '/supply_trucks/:id', to: 'supply_trucks#show'
