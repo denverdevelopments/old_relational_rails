@@ -1,10 +1,10 @@
-<%# app/views/restaurants/:id/sorted.html.erb %>
+<%# app/views/restaurants/most_chefs.html.erb %>
 
 <%= link_to "Home  .", "/" %>
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<h2>Chefs (Alphabetical): <%= @restaurant.name %></h2><br/>
+<h2>Restaurants (Ordered by most chefs)</h2><br/>
 
 <% @chefs.each do |chef| %>
   <h3><%= chef.name %>. ID:<%= chef.id %></h3>

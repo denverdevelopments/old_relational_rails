@@ -8,7 +8,7 @@ RSpec.describe 'As a visitor' do
       kevon = tgik.chefs.create!(name: "Kevon Loron", experience: 4, desserts: false)
 
       visit "/chefs/#{kevon.id}"
-      expect(page).to have_content(kevon.id)
+      # expect(page).to have_content(kevon.id)
       expect(page).to have_content(kevon.name)
       expect(page).to have_content(kevon.experience)
       # expect(page).to have_content(kevon.desserts)

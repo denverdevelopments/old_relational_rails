@@ -1,9 +1,10 @@
 <%# app/views/restaurants/index.html.erb %>
 
 <%= link_to "Home  .", "/" %>
-<%= link_to "Chefs Index", "/chefs" %>
+<%= link_to ".  Restaurants Index  .", "/restaurants" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<h1>Available Restaurants</h1>
+<h2>All Restaurants [Index]</h2><br/>
 
 <% @restaurants.each do |restaurant| %>
   <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a>.  .  .<a href="/restaurants/<%= restaurant.id %>/edit"> (update)</a></h3>
@@ -14,7 +15,12 @@
   <% end %>
   <p>Created on: <%= restaurant.created_at %></p>
 
+  <form action="/restaurants/<%= restaurant.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete this Restaurant"/>
+  </form><br/><br/>
+
 <% end %>
 
-<br>
-<h3><a href="/restaurants/new">OPEN a new Restaurant</a></h3>
+<%= link_to "OPEN a new Restaurant", "/restaurants/new" %>

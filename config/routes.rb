@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get '/eats', to: 'eats#index'
   get '/restaurants', to: 'restaurants#index'
   get '/restaurants/new', to: 'restaurants#new'
+  # get '/restaurants/most_chefs', to: 'restaurants#most_chefs'
   get '/restaurants/:id/sorted', to: 'restaurants#sorted'
 
   post '/restaurants', to: 'restaurants#create'

@@ -15,9 +15,10 @@
   <p>Does Not Have a Bar</p>
 <% end %><br/>
 
-<h4><a href="/chefs/new">Hire a new Chef</a></h4><br/>
+<%= link_to "HIRE new Chef", "/chefs/new" %><br/><br/>
 
-<a href="/restaurants/<%= @restaurant.id %>/edit">Update Restaurant</a><br/><br/>
+<%= link_to "UPDATE Restaurant", "/restaurants/@restaurant.id/edit" %><br/><br/>
+
 
 <form action="/restaurants/<%= @restaurant.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

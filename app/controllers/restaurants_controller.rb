@@ -17,11 +17,6 @@ class RestaurantsController < ApplicationController
     #OR @chefs = Chef.where(restaurant_id: params[:id])
   end
 
-  def sorted
-    @restaurant = Restaurant.find(params[:id])
-    @chefs = @restaurant.chefs.order(:name)
-  end
-
   def destroy
     Restaurant.destroy(params[:id])
     @fired = Chef.where(restaurant_id: params[:id])
@@ -40,26 +35,20 @@ class RestaurantsController < ApplicationController
   def new
   end
 
-  # <form action="/restaurants" method="post">
-  #   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  #   <h3>Open a new Restaurant:</h3>
-  #
-  #   Name:
-  #   <input type='text' name='restaurant[name]'/><br/>
-  #
-  #   Capacity:
-  #   <input type='integer' capacity='restaurant[capacity]'/><br/>
-  #
-  #   Has a bar:
-  #   <input type='boolean' has_bar='restaurant[has_bar]'/><br/>
-  #   <br>
-  #
-  #   <input type='submit'/>
-  # </form>
+  # def most_chefs
+  #   @most = Chef.count(*)
+  #   # @restaurant = Restaurant.find(params[:id])
+  #   # @chefs = @restaurant.chefs.order(:name)
+  # end
 
   def show
     @restaurant = Restaurant.find(params[:id])
     @chefs = Chef.where(restaurant_id: params[:id])
+  end
+
+  def sorted
+    @restaurant = Restaurant.find(params[:id])
+    @chefs = @restaurant.chefs.order(:name)
   end
 
   def update
