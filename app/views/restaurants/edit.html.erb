@@ -4,25 +4,15 @@
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<form action="/restaurants/<%= @restaurant.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <h2>Update Restaurant</h2><br/>
-  NAME:  <input type='text' name='restaurant[name]' value="<%= @restaurant.name %>"/><br/><br/>
-  SEAT CAPACITY:  <input type='integer' name='restaurant[capacity]' value="<%= @restaurant.capacity %>"/><br/><br/>
-  HAS A BAR?:  <input type='boolean' name='restaurant[has_bar]' value="<%= @restaurant.has_bar %>"/><br/><br/><br/>
-  <input type='Submit'/>
-</form><br/>
-
-<%= form_with url: "/restaurants", method: :post, local: true do |form| %>
+<%= form_with url: "/restaurants/#{@restaurant.id}", method: :patch, local: true do |form| %>
   <%= form.label :name %>
-  <%= form.text_field :name %>#{@restaurant.name %>}<br/><br/>
+  <%= form.text_field :name, placeholder: "#{@restaurant.name}" %><br/><br/>
 
   <%= form.label 'Capacity' %>
-  <%= form.number_field :capacity %><br/><br/>
+  <%= form.number_field :capacity, placeholder: "#{@restaurant.capacity}"%><br/><br/>
 
   <%= form.label 'Has a Bar' %>
-  <%= form.check_box :has_bar %><br/><br/>
+  <%= form.check_box :has_bar, checked: @restaurant.has_bar %><br/><br/>
 
   <%= form.submit 'Update Restaurant' %>
 <% end %>

@@ -6,7 +6,9 @@
 
 <h1>Chefs at: <%= @restaurant.name %></h1>
 
-<%= link_to "Sorted Chefs Index", "/restaurants/#{@restaurant.id}/sorted" %>
+<%= link_to "Sorted Chefs Index  .", "/restaurants/#{@restaurant.id}/sorted" %>
+
+<%= link_to ".  HIRE new Chef", "/chefs/new" %><br/><br/>
 
 <% @chefs.each do |chef| %>
   <h3><%= chef.name %> (ID: #<%= chef.id %>)</h3>

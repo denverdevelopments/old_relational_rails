@@ -56,13 +56,15 @@ class RestaurantsController < ApplicationController
 
   def update
     restaurant = Restaurant.find(params[:id])
+    # binding.pry
     restaurant.update({
-      name: params[:restaurant][:name],
-      capacity: params[:restaurant][:capacity],
-      has_bar: params[:restaurant][:has_bar]
+      name: params[:name],
+      capacity: params[:capacity],
+      has_bar: params[:has_bar]
       })
     restaurant.save
     redirect_to "/restaurants/#{restaurant.id}"
+    # has_bar: params[:restaurant][:has_bar]
   end
 
 end
