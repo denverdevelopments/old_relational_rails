@@ -7,7 +7,7 @@ class ChefsController < ApplicationController
       experience: params[:experience],
       desserts: params[:desserts]
       })
-    restaurant = chef.restaurant  #??
+    # restaurant = chef.restaurant  #??
     chef.save
     redirect_to '/restaurants/#{restaurant.id}/chefs'
   end
@@ -29,6 +29,7 @@ class ChefsController < ApplicationController
   end
 
   def new
+    # @restaurant = Restaurant.find(params[:id])
   end
 
   def show
@@ -38,9 +39,8 @@ class ChefsController < ApplicationController
   end
 
   def true
-    @chefs = Chef.find(params[:desserts] = true)
-    # @restaurant = Restaurant.find(params[:id])
-    # @chefs = @restaurant.chefs.order(:name)
+    @chefs = Chef.find_desserts
+    # @chefs = Chef.find(params[:desserts] = true)
   end
 
   def update

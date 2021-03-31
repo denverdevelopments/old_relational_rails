@@ -4,10 +4,12 @@
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<h2>All Restaurants [Index]</h2><br/>
+<h2>All Restaurants [Index]</h2>
+<%= link_to "OPEN a new Restaurant", "/restaurants/new" %><br/><br/>
 
 <% @restaurants.each do |restaurant| %>
-  <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a>.  .  .<a href="/restaurants/<%= restaurant.id %>/edit"> (update)</a></h3>
+  <h3><%= link_to "#{restaurant.name}", "/restaurants/#{restaurant.id}" %>.  .  .<%= link_to "(update)", "/restaurants/#{restaurant.id}/edit" %></h3>
+
   <% if restaurant.has_bar %>
     <p>Serves Alcohol</p>
   <% else %>
@@ -23,4 +25,4 @@
 
 <% end %>
 
-<%= link_to "OPEN a new Restaurant", "/restaurants/new" %>
+<%# link_to "List by Most Chefs", "/restaurants/most_chefs" %><br/><br/>

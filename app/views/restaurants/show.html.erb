@@ -4,9 +4,8 @@
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<h1><%= @restaurant.name %></h1>
-<p>Chefs on Staff: <%= @chefs.count %></p>
-<a href="/restaurants/<%= @restaurant.id %>/chefs">.  .  see Chefs</a><br/><br/>
+<h2><%= @restaurant.name %></h2>
+<p>(<%= @chefs.count %>)  Chefs on Staff: <%= link_to ".  .  see chefs", "/restaurants/#{@restaurant.id}/chefs" %></p>
 
 <p>Seats: <%= @restaurant.capacity %></p>
 <% if @restaurant.has_bar %>
@@ -17,8 +16,7 @@
 
 <%= link_to "HIRE new Chef", "/chefs/new" %><br/><br/>
 
-<%= link_to "UPDATE Restaurant", "/restaurants/@restaurant.id/edit" %><br/><br/>
-
+<%= link_to "Update Restaurant", "/restaurants/#{@restaurant.id}/edit" %><br/><br/>
 
 <form action="/restaurants/<%= @restaurant.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

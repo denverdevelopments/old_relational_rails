@@ -2,10 +2,10 @@
 
 <%= link_to "Home  .", "/" %>
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
-<%= link_to ".  Chefs Index", "/chefs" %>
+<%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h2>Chefs with Desserts</h2>
 
 <% @chefs.each do |chef| %>
-  <h3><%= chef.name %>. ID:<%= chef.id %></h3><br/>
+  <p><%= chef.name %>.  . (ID: <%= chef.id %>)</p>
 <% end %>

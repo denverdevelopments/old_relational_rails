@@ -14,7 +14,7 @@
 <% end %>
 <p>Primary Restaurant: <%= @restaurant.name %></p><br/>
 
-<a href="/chefs/<%= @chef.id %>/edit"> Update Chef</a><br/><br/>
+<%= link_to "Update Chef", "/chefs/#{@chef.id}/edit" %><br/><br/>
 
 <form action="/chefs/<%= @chef.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

@@ -36,14 +36,17 @@ class RestaurantsController < ApplicationController
   end
 
   # def most_chefs
-  #   @most = Chef.count(*)
+  #   @restaurant = Restaurant.find(params[:id])
+  #   @most_chefs = Chef.group(:restaurant_id).count.order
+  #   # @most = Chef.group(:restaurant_id).count.order
   #   # @restaurant = Restaurant.find(params[:id])
   #   # @chefs = @restaurant.chefs.order(:name)
   # end
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @chefs = Chef.where(restaurant_id: params[:id])
+    @chefs = @restaurant.chefs
+    #OR @chefs = Chef.where(restaurant_id: params[:id])
   end
 
   def sorted

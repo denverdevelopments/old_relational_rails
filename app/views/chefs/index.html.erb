@@ -4,10 +4,11 @@
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<h2>All Chefs [Index]</h2><br/>
+<h2>All Chefs [Index]</h2>
+<%= link_to "Show Chefs with desserts", "/chefs/true" %><br/><br/>
 
 <% @chefs.each do |chef| %>
-<h3><a href="/chefs/<%= chef.id %>"><%= chef.name %></a>.  .  .<a href="/chefs/<%= chef.id %>/edit"> (update)</a></h3>
+<h3><%= link_to "#{chef.name}", "/chefs/#{chef.id}" %>.  .  .<%= link_to "(update)", "/chefs/#{chef.id}/edit" %></h3>
   <p>Experience (yrs): <%= chef.experience %></p>
 
   <form action="/chefs/<%= chef.id %>" method="POST">
@@ -16,5 +17,3 @@
   <input type="submit" value="Delete this Chef"/>
   </form><br/><br/>
 <% end %>
-
-<a href="/chefs/true"> True Records</a>
