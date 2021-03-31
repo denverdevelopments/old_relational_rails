@@ -5,6 +5,7 @@
 
 <h2> Refrigerated Supply Trucks </h2>
 
-<% @supply_trucks.each do |supply_truck| %>
+<% @refrigerated_trucks.each do |supply_truck| %>
   <h3>Supply Truck: <%= supply_truck.id %></h3>
+  <h3> Refrigerated Trucks: <%= supply_truck.refrigerated %></h3>
 <% end %>

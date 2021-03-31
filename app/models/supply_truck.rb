@@ -1,8 +1,7 @@
 class SupplyTruck < ApplicationRecord
   belongs_to :supplier
 
-  # def true
-  #   SupplyTruck.where(refigerated: = true)
-  # end
-
+  def self.find_refrigerated_trucks
+    where(refrigerated: true)
+  end
 end

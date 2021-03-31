@@ -28,4 +28,6 @@ RSpec.describe 'Supply Trucks Index' do
       expect(page).to have_content(@josiesupplytruck2.id)
     end
   end
+
+  
 end

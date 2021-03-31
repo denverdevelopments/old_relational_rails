@@ -13,7 +13,7 @@ class SuppliersController < ApplicationController
   def supply_trucks
     # @supply_trucks = SupplyTruck.where(supplier_id: params[:id])
     @supplier = Supplier.find(params[:id])
-    @supply_trucks = @supplier.supply_trucks
+    # @supply_trucks = @supplier.supply_trucks
   end
 
   def create

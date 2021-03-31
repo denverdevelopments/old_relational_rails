@@ -3,6 +3,8 @@ class SupplyTrucksController < ApplicationController
     @supply_trucks = SupplyTruck.all
   end
 
+
+
   def show
     @supply_truck = SupplyTruck.find(params[:id])
   end
@@ -38,10 +40,12 @@ class SupplyTrucksController < ApplicationController
   end
 
   def new
+    supplier = Supplier.find(params[:id])
+    # @supply_truck = supplier.supply_trucks.new
   end
 
-  # def true
-  #   @supply_trucks = SupplyTruck.where(params[:refrigerated] = true)
-  # end
+  def true
+    @refrigerated_trucks = SupplyTruck.find_refrigerated_trucks
+  end
 
 end
