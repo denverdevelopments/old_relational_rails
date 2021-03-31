@@ -3,15 +3,15 @@
 <a href="/supply_trucks">Supply Truck Index</a>
 <a href="/suppliers"> Supplier Index</a>
 
-<form action="/supply_trucks/<%= @supply_truck.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Supply Truck:</p>
-  <input type='text' name='supply_truck[driver_name]' value="<%= @supply_truck.driver_name %>"/><br/>
-  <p>Number of Daily Deliveries</p>
-  <input type='integer' number_of_daily_deliveries='supply_truck[number_of_daily_deliveries]' value="<%= @supply_truck.number_of_daily_deliveries %>"/><br/>
-  <p>Refrigerated?</p>
-  <input type='boolean' refrigerated='supply_truck[refrigerated]' value="<%= @supply_truck.refrigerated %>"/><br/>
-  <br>
-  <input type='submit'/>
-</form>
+<%= form_with url:"/supply_trucks/#{@supply_truck.id}", method: :patch, local: true do |form| %>
+  <%= form.label 'Driver Name' %>
+  <%= form.text_field :driver_name %></br>
+
+  <%=form.label 'Number of Daily Deliveries' %>
+  <%= form.number_field :number_of_daily_deliveries %></br>
+
+  <%= form.label 'Refrigerated?' %>
+  <%= form.check_box :refrigerated %></br>
+
+  <%= form.submit 'Update Supply Truck' %>
+<% end %>

@@ -8,7 +8,8 @@ class SupplyTrucksController < ApplicationController
   end
 
   def create
-    supply_truck = SupplyTruck.new({
+    @supplier = Supplier.find(params[:id])
+    supply_truck = @supplier.supply_trucks.new({
       driver_name: params[:driver_name],
       number_of_daily_deliveries: params[:number_of_daily_deliveries],
       refrigerated: params[:refrigerated]
@@ -39,7 +40,7 @@ class SupplyTrucksController < ApplicationController
   end
 
   def new
-
+    @supplier = Supplier.find(params[:id])
   end
 
   def true

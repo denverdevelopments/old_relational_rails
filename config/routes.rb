@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   patch '/suppliers/:id', to: 'suppliers#update'
   get '/suppliers/:id/supply_trucks', to: 'suppliers#supply_trucks'
   get '/suppliers/:id/supply_trucks/new', to: 'supply_trucks#new'
-  post '/supply_trucks/new', to: 'supply_trucks#create'
+  post '/suppliers/:id/supply_trucks', to: 'supply_trucks#create'
 
   get '/supply_trucks', to: 'supply_trucks#index'
   get '/supply_trucks/true', to: 'supply_trucks#true'
