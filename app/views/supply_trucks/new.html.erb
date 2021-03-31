@@ -3,7 +3,7 @@
 <a href="/supply_trucks">Supply Truck Index</a>
 <a href="/suppliers"> Supplier Index</a>
 
-<%= form_with url:"/supply_trucks", method: :post, local: true do |form| %>
+<%= form_with url:"/supply_trucks/new", method: :post, local: true do |form| %>
   <%= form.label :driver_name %>
   <%= form.text_field :driver_name %></br>
 

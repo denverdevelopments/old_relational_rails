@@ -1,0 +1,14 @@
+<%# %>
+<%= link_to "Home", "/" %>
+<%= link_to "Restaurants and Chefs", "/eats" %>
+<%= link_to "Supplier Index", "/suppliers" %>
+<%= link_to "Supply Truck Index", "/supply_trucks" %>
+
+<h2>Supply Trucks (Alphabetically by Driver Name): <%= @supplier.name %></h2><br/>
+
+<% @supply_trucks.each do |supply_truck| %>
+<h3>Truck Number: <%= supply_truck.id %></h3>
+<h4>Driver Name: <%= supply_truck.driver_name %>
+  Number of Daily Deliveries: <%= supply_truck.number_of_daily_deliveries %>
+  Refrigerated? <%= supply_truck.refrigerated %></h4>
+<% end %>

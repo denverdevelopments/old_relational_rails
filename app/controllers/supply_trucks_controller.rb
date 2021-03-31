@@ -8,14 +8,13 @@ class SupplyTrucksController < ApplicationController
   end
 
   def create
-    # supplier = Supplier.find(params[:id])
     supply_truck = SupplyTruck.new({
       driver_name: params[:driver_name],
       number_of_daily_deliveries: params[:number_of_daily_deliveries],
       refrigerated: params[:refrigerated]
       })
       supply_truck.save
-      redirect_to '/supply_trucks'
+      redirect_to "/supply_trucks/#{supply_truck.id}"
   end
 
   def update
@@ -30,8 +29,9 @@ class SupplyTrucksController < ApplicationController
   end
 
   def destroy
-    SupplyTruck.destroy(params[:id])
-    redirect_to 'supply_trucks'
+    @supply_truck = SupplyTruck.find(params[:id])
+    @supply_truck.destroy
+    redirect_to '/supply_trucks'
   end
 
   def edit
@@ -39,8 +39,7 @@ class SupplyTrucksController < ApplicationController
   end
 
   def new
-    supplier = Supplier.find(params[:id])
-    # @supply_truck = supplier.supply_trucks.new
+
   end
 
   def true

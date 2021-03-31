@@ -16,15 +16,15 @@ Rails.application.routes.draw do
   patch '/suppliers/:id', to: 'suppliers#update'
   get '/suppliers/:id/supply_trucks', to: 'suppliers#supply_trucks'
   get '/suppliers/:id/supply_trucks/new', to: 'supply_trucks#new'
-  post '/suppliers/:id/supply_trucks', to: 'supply_trucks#create'
+  post '/supply_trucks/new', to: 'supply_trucks#create'
 
   get '/supply_trucks', to: 'supply_trucks#index'
-  post '/supply_trucks', to: 'supply_trucks#create'
   get '/supply_trucks/true', to: 'supply_trucks#true'
   delete '/supply_trucks/:id', to: 'supply_trucks#destroy'
   get '/supply_trucks/:id', to: 'supply_trucks#show'
   get '/supply_trucks/:id/edit', to: 'supply_trucks#edit'
   patch '/supply_trucks/:id', to: 'supply_trucks#update'
+  get '/suppliers/:id/sorted', to: 'suppliers#sorted'
 
 
 
