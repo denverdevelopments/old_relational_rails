@@ -3,15 +3,15 @@
 <a href="/supply_trucks">Supply Truck Index</a>
 <a href="/suppliers"> Supplier Index</a>
 
-<form action="/suppliers/<%= @supplier.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Supplier:</p>
-  <input type='text' name='supplier[name]' value="<%= @supplier.name %>"/><br/>
-  <p>Number of Employees</p>
-  <input type='integer' number_of_employees='supplier[number_of_employees]' value="<%= @supplier.number_of_employees %>"/><br/>
-  <p>Open Weekends?</p>
-  <input type='boolean' open_weekends='supplier[open_weekends]' value="<%= @supplier.open_weekends %>"/><br/>
-  <br>
-  <input type='submit'/>
-</form>
+<%= form_with url:"/suppliers/#{@supplier.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %></br>
+
+  <%=form.label 'Number of Employees' %>
+  <%= form.number_field :number_of_employees %></br>
+
+  <%= form.label 'Open Weekends' %>
+  <%= form.check_box :open_weekends %></br>
+
+  <%= form.submit 'Update Supplier' %>
+<% end %>

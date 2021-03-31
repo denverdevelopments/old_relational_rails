@@ -5,6 +5,7 @@
 <h1> Supplier: <%= @supplier.name %></h1>
 <p><a href="/suppliers/<%= @supplier.id %>/supply_trucks/new"> Create New Supply Truck</a></p>
 
+<%= link_to "Sort Supply Trucks By Name", "/suppliers/#{@supplier.id}/sorted" %>
 <% @supplier.supply_trucks.each do |supply_truck| %>
 
 

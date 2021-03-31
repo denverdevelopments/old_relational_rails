@@ -49,4 +49,9 @@ class SuppliersController < ApplicationController
       supplier.save
       redirect_to "/suppliers/#{supplier.id}"
   end
+
+  def sorted
+    @supplier = Supplier.find(params[:id])
+    @supply_trucks = @supplier.supply_trucks.order(:driver_name)
+  end
 end
