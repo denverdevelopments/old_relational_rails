@@ -12,5 +12,8 @@ RSpec.describe 'Restaurant Index' do
     expect(page).to have_content(@tgik.name)
     expect(page).to have_content(@wicks.name)
     expect(page).to have_content(@miller.name)
+    expect(page).to have_content(@tgik.created_at)
+    expect(page).to have_content(@wicks.created_at)
+    expect(page).to have_content(@miller.created_at)
   end
 end

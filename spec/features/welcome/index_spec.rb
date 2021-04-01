@@ -5,7 +5,6 @@ RSpec.describe 'Welcome Index', type: :feature do
         it 'shows links to supply side' do
           visit '/'
 
-          # expect(page).to have_selector(:css, 'a[href="localhost:3000/supply_side"]')
           click_link 'Supply Side'
           expect(current_path).to eq("/supply_side")
         end

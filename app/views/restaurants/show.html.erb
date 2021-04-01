@@ -5,8 +5,9 @@
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h2><%= @restaurant.name %></h2>
-<p>(<%= @chefs.count %>)  Chefs on Staff: <%= link_to ".  .  see chefs", "/restaurants/#{@restaurant.id}/chefs" %></p>
+<p>(<%= @restaurant.count_chefs %>)  Chefs on Staff: <%= link_to ".  .  see chefs", "/restaurants/#{@restaurant.id}/chefs" %></p>
 
+<p>Restaurant ID: <%= @restaurant.id %></p>
 <p>Seats: <%= @restaurant.capacity %></p>
 <% if @restaurant.has_bar %>
   <p>Has a Bar</p>
