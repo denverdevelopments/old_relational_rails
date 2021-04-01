@@ -23,7 +23,7 @@ describe SupplyTruck do
   describe "class methods" do
     describe "::find_refrigerated_trucks" do
       it "Create a test for a corresponding method to find refrigerated trucks" do
-        expect(SupplyTruck.find_refrigerated_trucks).to eq(@wessupplytruck3)
+        expect(SupplyTruck.find_refrigerated_trucks).to eq([@wessupplytruck3])
       end
     end
   end

@@ -4,4 +4,5 @@ class SupplyTruck < ApplicationRecord
   def self.find_refrigerated_trucks
     where(refrigerated: true)
   end
+
 end

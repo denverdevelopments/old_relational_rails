@@ -16,7 +16,7 @@ RSpec.describe 'Edit Supplier' do
         fill_in 'Name', with: "Kevin's New Carrots"
         click_on 'Update Supplier'
 
-        expect(current_path).to_eq("/suppliers/#{kevin.id}")
+        expect(current_path).to eq("/suppliers/#{kevin.id}")
         expect(page).to have_content("Kevin's New Carrots")
       end
     end
