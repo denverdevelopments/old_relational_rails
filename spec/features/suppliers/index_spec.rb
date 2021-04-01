@@ -12,5 +12,9 @@ RSpec.describe 'Supplier Index' do
     expect(page).to have_content(@kevin.name)
     expect(page).to have_content(@wes.name)
     expect(page).to have_content(@josie.name)
+    expect(page).to have_content(@kevin.created_at)
+    expect(page).to have_content(@wes.created_at)
+    expect(page).to have_content(@josie.created_at)
+
   end
 end

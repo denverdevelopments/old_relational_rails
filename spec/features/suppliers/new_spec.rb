@@ -12,7 +12,7 @@ RSpec.describe 'New Supplier' do
         click_on 'Create New Supplier'
 
         expect(current_path).to eq("/suppliers")
-        expect(page).to have_Content('Wyatt')
+        expect(page).to have_content('Wyatt')
       end
     end
   end
