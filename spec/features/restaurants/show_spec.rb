@@ -10,8 +10,7 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_content(tgik.name)
       expect(page).to have_content(tgik.id)
       expect(page).to have_content(tgik.capacity)
-      expect(page).to have_link(".  .  see chefs", href: "/restaurants/#{tgik.id}/chefs")
-      expect(page).to have_link("Update Restaurant", href: "/restaurants/#{tgik.id}/edit")
+      
     end
   end
 end
