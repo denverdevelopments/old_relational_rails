@@ -9,7 +9,7 @@ RSpec.describe 'New Chef' do
         @tgik = Restaurant.create!(name: "TGI Kevin's", capacity: 220, has_bar: false)
 
         visit "/restaurants/#{@tgik.id}/chefs"
-        click_link '. HIRE a New Chef'
+        click_link '.  HIRE new Chef'
         expect(current_path).to eq("/restaurants/#{@kevin.id}/chefs/new")
         fill_in 'name', with: 'Joe'
         click_on 'Hire a Chef'
