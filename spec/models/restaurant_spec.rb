@@ -16,5 +16,18 @@ describe Restaurant, type: :model do
         expect(Chef.find_desserts).to eq([wyatt])
       end
     end
+
+    describe "count chefs" do
+      it "counts chefs at a restaurant" do
+        wicks = Restaurant.create!(name: "Wicks Saloon n' Honkytonk", capacity: 95, has_bar: true)
+
+        wyatt = wicks.chefs.create!(name: "Earp Wyatt", experience: 7, desserts: true)
+        holiday = wicks.chefs.create!(name: "Jessie Holiday", experience: 2, desserts: false)
+
+        expect(Restaurant.count_chefs).to eq(2)
+      end
+    end
+
   end
+
 end

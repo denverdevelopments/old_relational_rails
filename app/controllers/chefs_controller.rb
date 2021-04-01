@@ -42,7 +42,6 @@ class ChefsController < ApplicationController
 
   def true
     @chefs = Chef.find_desserts
-    # @chefs = Chef.find(params[:desserts] = true)
   end
 
   def update
