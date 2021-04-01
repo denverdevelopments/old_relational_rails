@@ -5,12 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Restaurant.connection.truncate(Restaurant.table_name)
 
 ## Kevin side
 Chef.destroy_all
-# Chef.connection.truncate(Chef.table_name)
 Restaurant.destroy_all
-# Restaurant.connection.truncate(Restaurant.table_name)
 
 
 tgik = Restaurant.create!(name: "TGI Kevin's", capacity: 220, has_bar: false)
