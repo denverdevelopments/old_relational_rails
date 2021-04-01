@@ -16,13 +16,15 @@ RSpec.describe 'Chef Index' do
     @jacque = miller.chefs.create!(name: "Jacque Milair", experience: 6, desserts: true)
   end
 
-  it 'shows all chefs' do
-    visit '/chefs'
-    expect(page).to have_content(@kevon.name)
-    expect(page).to have_content(@rordon.name)
-    expect(page).to have_content(@chulia.name)
-    expect(page).to have_content(@earp.name)
-    expect(page).to have_content(@jessie.name)
-    expect(page).to have_content(@jacque.name)
+  describe "as a user" do
+    it 'shows all chefs' do
+      visit '/chefs'
+      expect(page).to have_content(@kevon.name)
+      expect(page).to have_content(@rordon.name)
+      expect(page).to have_content(@chulia.name)
+      expect(page).to have_content(@earp.name)
+      expect(page).to have_content(@jessie.name)
+      expect(page).to have_content(@jacque.name)
+    end
   end
 end

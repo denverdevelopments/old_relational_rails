@@ -14,7 +14,6 @@ class RestaurantsController < ApplicationController
   def chefs
     @restaurant = Restaurant.find(params[:id])
     @chefs = @restaurant.chefs
-    #OR @chefs = Chef.where(restaurant_id: params[:id])
   end
 
   def destroy
@@ -35,18 +34,9 @@ class RestaurantsController < ApplicationController
   def new
   end
 
-  # def most_chefs
-  #   @restaurant = Restaurant.find(params[:id])
-  #   @most_chefs = Chef.group(:restaurant_id).count.order
-  #   # @most = Chef.group(:restaurant_id).count.order
-  #   # @restaurant = Restaurant.find(params[:id])
-  #   # @chefs = @restaurant.chefs.order(:name)
-  # end
-
   def show
     @restaurant = Restaurant.find(params[:id])
     @chefs = @restaurant.chefs
-    #OR @chefs = Chef.where(restaurant_id: params[:id])
   end
 
   def sorted
@@ -56,7 +46,6 @@ class RestaurantsController < ApplicationController
 
   def update
     restaurant = Restaurant.find(params[:id])
-    # binding.pry
     restaurant.update({
       name: params[:name],
       capacity: params[:capacity],
@@ -64,7 +53,6 @@ class RestaurantsController < ApplicationController
       })
     restaurant.save
     redirect_to "/restaurants/#{restaurant.id}"
-    # has_bar: params[:restaurant][:has_bar]
   end
 
 end

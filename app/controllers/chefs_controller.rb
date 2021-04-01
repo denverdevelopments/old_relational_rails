@@ -2,7 +2,6 @@
 
 class ChefsController < ApplicationController
   def create
-    # binding.pry
     @restaurant = Restaurant.find(params[:id])
     chef = @restaurant.chefs.new({
       name: params[:name],
@@ -10,14 +9,11 @@ class ChefsController < ApplicationController
       desserts: params[:desserts]
       })
       chef.save
-      # redirect_to "/restaurants/#{@restaurant.id}/chefs"
       redirect_to "/chefs/#{chef.id}"
   end
 
   def destroy
     Chef.destroy(params[:id])
-    # @fired = Chef.where(restaurant_id: params[:id])
-    # @fired.destroy_all
     redirect_to '/chefs'
   end
 
@@ -27,7 +23,6 @@ class ChefsController < ApplicationController
 
   def index
     @chefs = Chef.all
-    # @restaurant = @chef.restaurant
   end
 
   def new
@@ -37,7 +32,6 @@ class ChefsController < ApplicationController
   def show
     @chef = Chef.find(params[:id])
     @restaurant = @chef.restaurant
-    #OR @restaurant = Restaurant.find(@chef.restaurant_id)
   end
 
   def true
