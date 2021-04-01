@@ -1,7 +1,7 @@
-<a href="/">Home</a>
-<a href="/eats">Restaurants & Chefs</a>
-<a href="/supply_trucks">Supply Truck Index</a>
-<a href="/suppliers"> Supplier Index</a>
+<%= link_to "Home", "/" %>
+<%= link_to "Restaurants and Chefs", "/eats" %>
+<%= link_to "Supplier Index", "/suppliers" %>
+<%= link_to "Supply Truck Index", "/supply_trucks" %>
 
 <%= form_with url:"/suppliers/#{@supplier.id}/supply_trucks", method: :post, local: true do |form| %>
   <%= form.label :driver_name %>

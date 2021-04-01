@@ -1,7 +1,8 @@
 <%# %>
-<a href="/">Home</a>
-<a href="/eats">Restaurants & Chefs</a>
-<a href="/supply_trucks">Supply Truck Index</a>
+<%= link_to "Home", "/" %>
+<%= link_to "Restaurants and Chefs", "/eats" %>
+<%= link_to "Supplier Index", "/suppliers" %>
+<%= link_to "Supply Truck Index", "/supply_trucks" %>
 
 <h1>All Suppliers</h1>
 <h1><% @suppliers.each do |supplier| %><h1>
@@ -18,4 +19,4 @@
 
 <br>
 <h3><a href="/suppliers/new"> Create New Supplier</a><h3>
-  <H3><a 
+  <H3><a

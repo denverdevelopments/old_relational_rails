@@ -1,7 +1,8 @@
 <%# %>
-<a href="/">Home</a>
-<a href="/eats">Restaurants & Chefs</a>
-<a href="/suppliers">Supplier Index</a>
+<%= link_to "Home", "/" %>
+<%= link_to "Restaurants and Chefs", "/eats" %>
+<%= link_to "Supplier Index", "/suppliers" %>
+<%= link_to "Supply Truck Index", "/supply_trucks" %>
 <h1> Supplier: <%= @supplier.name %></h1>
 <p><a href="/suppliers/<%= @supplier.id %>/supply_trucks/new"> Create New Supply Truck</a></p>
 
