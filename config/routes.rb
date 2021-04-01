@@ -33,26 +33,28 @@ Rails.application.routes.draw do
   get '/restaurants', to: 'restaurants#index'
   get '/restaurants/new', to: 'restaurants#new'
   post '/restaurants', to: 'restaurants#create'
-  get '/restaurants/:id/sorted', to: 'restaurants#sorted'
   # get '/restaurants/most_chefs', to: 'restaurants#most_chefs'
 
+  delete '/restaurants/:id', to: 'restaurants#destroy'
   get '/restaurants/:id', to: "restaurants#show"
   get '/restaurants/:id/edit', to: 'restaurants#edit'
   patch '/restaurants/:id', to: 'restaurants#update'
-  delete '/restaurants/:id', to: 'restaurants#destroy'
+
+  # get '/suppliers/:id/supply_trucks', to: 'suppliers#supply_trucks'
+  # get '/suppliers/:id/supply_trucks/new', to: 'supply_trucks#new'
+  # post '/suppliers/:id/supply_trucks', to: 'supply_trucks#create'
 
   get '/restaurants/:id/chefs', to: 'restaurants#chefs'
-
+  get '/restaurants/:id/chefs/new', to: 'chefs#new'
+  post '/restaurants/:id/chefs', to: 'chefs#create'
+  
   get '/chefs', to: 'chefs#index'
-  get '/chefs/new', to: 'chefs#new'
-  post '/chefs', to: 'chefs#create'
-  get '/chefs/true', to: 'chefs#true'
-
-  get '/chefs/:id', to: "chefs#show"
+  # get '/chefs/true', to: 'chefs#true'
   delete '/chefs/:id', to: 'chefs#destroy'
-  patch '/chefs/:id', to: 'chefs#update'
+  get '/chefs/:id', to: "chefs#show"
   get '/chefs/:id/edit', to: 'chefs#edit'
-
+  patch '/chefs/:id', to: 'chefs#update'
+  get '/restaurants/:id/sorted', to: 'restaurants#sorted'
 
 end
 

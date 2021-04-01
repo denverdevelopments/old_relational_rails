@@ -4,5 +4,4 @@ class Chef < ApplicationRecord
   def self.find_desserts
     where(desserts: true)
   end
-
 end

@@ -3,7 +3,7 @@
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
 <h3>NEW CHEF</h3><br/>
-<%= form_with url: "/chefs", method: :post, local: true do |form| %>
+<%= form_with url:"/restaurants/#{@restaurant.id}/chefs", method: :post, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %><br/><br/>
 
