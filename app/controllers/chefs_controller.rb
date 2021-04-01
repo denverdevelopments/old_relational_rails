@@ -2,14 +2,16 @@
 
 class ChefsController < ApplicationController
   def create
-    chef = Chef.new({
+    # binding.pry
+    @restaurant = Restaurant.find(params[:id])
+    chef = @restaurant.chefs.new({
       name: params[:name],
       experience: params[:experience],
       desserts: params[:desserts]
       })
-    # restaurant = chef.restaurant  #??
-    chef.save
-    redirect_to '/restaurants/#{restaurant.id}/chefs'
+      chef.save
+      # redirect_to "/restaurants/#{@restaurant.id}/chefs"
+      redirect_to "/chefs/#{chef.id}"
   end
 
   def destroy
@@ -29,7 +31,7 @@ class ChefsController < ApplicationController
   end
 
   def new
-    # @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def show
