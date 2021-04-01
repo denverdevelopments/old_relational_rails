@@ -24,7 +24,7 @@ describe Restaurant, type: :model do
         wyatt = wicks.chefs.create!(name: "Earp Wyatt", experience: 7, desserts: true)
         holiday = wicks.chefs.create!(name: "Jessie Holiday", experience: 2, desserts: false)
 
-        expect(Restaurant.count_chefs).to eq(2)
+        expect(wicks.count_chefs).to eq(2)
       end
     end
 

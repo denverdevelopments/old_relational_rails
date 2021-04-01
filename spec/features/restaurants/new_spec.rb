@@ -5,7 +5,7 @@ RSpec.describe 'New Restaurant' do
     describe 'When I visit the new restaurant form' do
       it 'I can create a new restaurant' do
         visit '/restaurants'
-        
+
         click_link 'OPEN a new Restaurant'
         expect(current_path).to eq('/restaurants/new')
 
@@ -13,7 +13,7 @@ RSpec.describe 'New Restaurant' do
         click_on 'Open Restaurant'
 
         expect(current_path).to eq("/restaurants")
-        expect(page).to have_Content('Fine Diner')
+        expect(page).to have_content('Fine Diner')
       end
     end
   end

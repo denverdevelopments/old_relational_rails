@@ -7,8 +7,8 @@ RSpec.describe 'Restaurants & Chefs Index', type: :feature do
         visit '/eats'
         click_link 'Home .'
         expect(current_path).to eq("/")
-        
-        click_link '. Supply Side'
+
+        click_link 'Supply Side'
         expect(current_path).to eq("/supply_side")
       end
 
