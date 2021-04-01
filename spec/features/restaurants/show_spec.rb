@@ -9,6 +9,7 @@ RSpec.describe 'As a visitor' do
       expect(page).to have_content(tgik.name)
       expect(page).to have_content(tgik.id)
       expect(page).to have_content(tgik.capacity)
+
     end
 
     it 'I see a link to update' do

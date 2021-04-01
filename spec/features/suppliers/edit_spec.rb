@@ -4,6 +4,7 @@ RSpec.describe 'Edit Supplier' do
   describe 'As a visitor' do
     describe 'When I visit a suppliers show page' do
       it 'I can update the supplier' do
+        Supplier.destroy_all
         kevin = Supplier.create!(name: "Kevin's Carrots", number_of_employees: 5, open_weekends: true)
 
         visit '/suppliers'
