@@ -47,9 +47,9 @@ Rails.application.routes.draw do
   get '/restaurants/:id/chefs', to: 'restaurants#chefs'
   get '/restaurants/:id/chefs/new', to: 'chefs#new'
   post '/restaurants/:id/chefs', to: 'chefs#create'
-  
+
   get '/chefs', to: 'chefs#index'
-  # get '/chefs/true', to: 'chefs#true'
+  get '/chefs/true', to: 'chefs#true'
   delete '/chefs/:id', to: 'chefs#destroy'
   get '/chefs/:id', to: "chefs#show"
   get '/chefs/:id/edit', to: 'chefs#edit'

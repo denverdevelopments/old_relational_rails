@@ -36,6 +36,7 @@ class ChefsController < ApplicationController
 
   def true
     @chefs = Chef.find_desserts
+    render(:index)  ## Re-use index.html.erb
   end
 
   def update

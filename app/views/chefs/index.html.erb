@@ -9,11 +9,8 @@
 
 <% @chefs.each do |chef| %>
 <h3><%= link_to "#{chef.name}", "/chefs/#{chef.id}" %>.  .  .<%= link_to "(update)", "/chefs/#{chef.id}/edit" %></h3>
-  <p>Experience (yrs): <%= chef.experience %></p>
+  <p>Makes Desserts: <%= chef.desserts %></p>
 
-  <form action="/chefs/<%= chef.id %>" method="POST">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete this Chef"/>
-  </form><br/><br/>
+ <%= button_to 'Delete', "/chefs/#{chef.id}", method: :delete %>
+
 <% end %>

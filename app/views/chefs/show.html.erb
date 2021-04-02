@@ -15,9 +15,4 @@
 <p>Primary Restaurant: <%= @restaurant.name %></p><br/>
 
 <%= link_to "Update Chef", "/chefs/#{@chef.id}/edit" %><br/><br/>
-
-<form action="/chefs/<%= @chef.id %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="DELETE">
-<input type="submit" value="Delete this Chef"/>
-</form>
+<%= button_to 'Delete', "/chefs/#{@chef.id}", method: :delete %>

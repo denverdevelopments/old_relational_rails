@@ -4,13 +4,15 @@
 <%= link_to ".  Restaurants Index  .", "/restaurants" %>
 <%= link_to ".  Chefs Index", "/chefs" %><br/><br/>
 
-<form action="/chefs/<%= @chef.id %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="PATCH" />
-  <h2>Update Chef</h2><br/>
-  NAME:  <input type='text' name='chef[name]' value="<%= @chef.name %>"/><br/><br/>
-  Experience (yrs):  <input type='integer' capacity='chef[experience]' value="<%= @chef.experience %>"/><br/><br/>
-  Makes Dessert?:  <input type='boolean' has_bar='chef[desserts]' value="<%= @chef.desserts %>"/><br/><br/>
+<%= form_with url: "/chefs/#{@chef.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, placeholder: "#{@chef.name}" %><br/><br/>
 
-  <input type='submit'/>
-</form>
+  <%= form.label 'Experience' %>
+  <%= form.number_field :experience, placeholder: "#{@chef.experience}"%><br/><br/>
+
+  <%= form.label 'Makes Desserts' %>
+  <%= form.check_box :desserts, checked: @chef.desserts %><br/><br/>
+
+  <%= form.submit 'Update Chef' %>
+<% end %>

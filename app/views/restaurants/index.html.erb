@@ -17,12 +17,7 @@
   <% end %>
   <p>Created on: <%= restaurant.created_at %></p>
 
-  <form action="/restaurants/<%= restaurant.id %>" method="POST">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete this Restaurant"/>
-  </form><br/><br/>
-
+<%= button_to 'Delete', "/restaurants/#{restaurant.id}", method: :delete %><br/><br/>
 <% end %>
 
 <%# link_to "List by Most Chefs", "/restaurants/most_chefs" %><br/><br/>
